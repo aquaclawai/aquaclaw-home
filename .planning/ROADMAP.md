@@ -36,7 +36,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A dummy page at `/en/test` has correct `<title>`, Open Graph tags, and canonical URL rendered in page source
   4. `sitemap.xml` and `robots.txt` are accessible at their expected URLs and contain valid content
   5. The project builds without errors (`npm run build`) with TypeScript strict mode enabled
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Bootstrap Next.js 16 project with all dependencies, strict TypeScript, Turbopack MDX config, and vitest test scaffold
+- [ ] 01-02-PLAN.md — i18n routing layer: next-intl middleware, app/[lang]/ routes, getDictionary server-only loader, seeded en.json dictionary
+- [ ] 01-03-PLAN.md — Typed content access layer: Zod schemas for all four content types, lib/content/ accessor functions, content directories with day-001.mdx
+- [ ] 01-04-PLAN.md — SEO pipeline: app/sitemap.ts, app/robots.ts, /en/test proof-of-concept page with generateMetadata and OG tags
 
 ### Phase 2: Design System
 **Goal**: Every visual building block for the Bold & Playful aesthetic exists and is enforced — color tokens, mascot rendering rules, typography scale, animation performance rules — so all subsequent phases can build on a consistent foundation
@@ -162,7 +168,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/4 | Not started | - |
 | 2. Design System | 0/TBD | Not started | - |
 | 3. Navigation Shell | 0/TBD | Not started | - |
 | 4. Diary Section | 0/TBD | Not started | - |
