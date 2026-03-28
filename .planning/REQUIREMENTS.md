@@ -116,52 +116,52 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUN-01 | TBD | Pending |
-| FOUN-02 | TBD | Pending |
-| FOUN-03 | TBD | Pending |
-| FOUN-04 | TBD | Pending |
-| FOUN-05 | TBD | Pending |
-| NAV-01 | TBD | Pending |
-| NAV-02 | TBD | Pending |
-| NAV-03 | TBD | Pending |
-| NAV-04 | TBD | Pending |
-| DIAR-01 | TBD | Pending |
-| DIAR-02 | TBD | Pending |
-| DIAR-03 | TBD | Pending |
-| ARTC-01 | TBD | Pending |
-| ARTC-02 | TBD | Pending |
-| ARTC-03 | TBD | Pending |
-| SCIE-01 | TBD | Pending |
-| SCIE-02 | TBD | Pending |
-| SCIE-03 | TBD | Pending |
-| SKIL-01 | TBD | Pending |
-| SKIL-02 | TBD | Pending |
-| SKIL-03 | TBD | Pending |
-| HOME-01 | TBD | Pending |
-| HOME-02 | TBD | Pending |
-| HOME-03 | TBD | Pending |
-| HOME-04 | TBD | Pending |
-| HOME-05 | TBD | Pending |
-| BRAN-01 | TBD | Pending |
-| BRAN-02 | TBD | Pending |
-| BRAN-03 | TBD | Pending |
-| BRAN-04 | TBD | Pending |
-| BRAN-05 | TBD | Pending |
-| BRAN-06 | TBD | Pending |
-| OPCL-01 | TBD | Pending |
-| OPCL-02 | TBD | Pending |
-| OPCL-03 | TBD | Pending |
-| ENGG-01 | TBD | Pending |
-| ENGG-02 | TBD | Pending |
-| AUTO-01 | TBD | Pending |
-| AUTO-02 | TBD | Pending |
-| AUTO-03 | TBD | Pending |
+| FOUN-01 | Phase 1 | Pending |
+| FOUN-02 | Phase 1 | Pending |
+| FOUN-03 | Phase 1 | Pending |
+| FOUN-04 | Phase 1 | Pending |
+| FOUN-05 | Phase 1 | Pending |
+| BRAN-01 | Phase 2 | Pending |
+| BRAN-02 | Phase 2 | Pending |
+| BRAN-03 | Phase 2 | Pending |
+| BRAN-04 | Phase 2 | Pending |
+| BRAN-05 | Phase 2 | Pending |
+| BRAN-06 | Phase 2 | Pending |
+| NAV-01 | Phase 3 | Pending |
+| NAV-02 | Phase 3 | Pending |
+| NAV-03 | Phase 3 | Pending |
+| NAV-04 | Phase 3 | Pending |
+| DIAR-01 | Phase 4 | Pending |
+| DIAR-02 | Phase 4 | Pending |
+| DIAR-03 | Phase 4 | Pending |
+| ARTC-01 | Phase 5 | Pending |
+| ARTC-02 | Phase 5 | Pending |
+| ARTC-03 | Phase 5 | Pending |
+| SCIE-01 | Phase 6 | Pending |
+| SCIE-02 | Phase 6 | Pending |
+| SCIE-03 | Phase 6 | Pending |
+| SKIL-01 | Phase 7 | Pending |
+| SKIL-02 | Phase 7 | Pending |
+| SKIL-03 | Phase 7 | Pending |
+| HOME-01 | Phase 8 | Pending |
+| HOME-02 | Phase 8 | Pending |
+| HOME-03 | Phase 8 | Pending |
+| HOME-04 | Phase 8 | Pending |
+| HOME-05 | Phase 8 | Pending |
+| OPCL-01 | Phase 9 | Pending |
+| OPCL-02 | Phase 9 | Pending |
+| OPCL-03 | Phase 9 | Pending |
+| AUTO-01 | Phase 10 | Pending |
+| AUTO-02 | Phase 10 | Pending |
+| AUTO-03 | Phase 10 | Pending |
+| ENGG-01 | Phase 11 | Pending |
+| ENGG-02 | Phase 11 | Pending |
 
 **Coverage:**
 - v1 requirements: 40 total
-- Mapped to phases: 0
-- Unmapped: 40
+- Mapped to phases: 40
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-28*
-*Last updated: 2026-03-28 after initial definition*
+*Last updated: 2026-03-28 after roadmap creation — all 40 requirements mapped*
