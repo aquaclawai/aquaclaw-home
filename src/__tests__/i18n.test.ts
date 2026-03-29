@@ -51,7 +51,7 @@ describe('i18n architecture (FOUN-02)', () => {
   })
 
   it('lib/i18n/getDictionary.ts contains server-only guard', () => {
-    const content = readFileSync(resolve(process.cwd(), 'lib/i18n/getDictionary.ts'), 'utf-8')
+    const content = readFileSync(resolve(process.cwd(), 'src/lib/i18n/getDictionary.ts'), 'utf-8')
     expect(content).toContain("import 'server-only'")
   })
 })

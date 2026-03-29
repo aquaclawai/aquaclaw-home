@@ -15,7 +15,7 @@ describe('Task 1: i18n infrastructure files', () => {
   })
 
   it('lib/i18n/getDictionary.ts exists with server-only guard', () => {
-    const filePath = resolve(process.cwd(), 'lib/i18n/getDictionary.ts')
+    const filePath = resolve(process.cwd(), 'src/lib/i18n/getDictionary.ts')
     expect(existsSync(filePath)).toBe(true)
     const content = readFileSync(filePath, 'utf-8')
     expect(content).toContain("import 'server-only'")
