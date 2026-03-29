@@ -10,8 +10,10 @@ export default defineConfig({
     globals: true,
   },
   resolve: {
+    extensions: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json'],
     alias: {
       '@': path.resolve(__dirname, './src'),
+      'server-only': path.resolve(__dirname, './src/__mocks__/server-only.ts'),
     },
   },
 })
