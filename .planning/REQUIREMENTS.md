@@ -9,7 +9,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Foundation
 
-- [ ] **FOUN-01**: Project bootstrapped with Next.js 16 App Router, TypeScript, Tailwind CSS v4
+- [x] **FOUN-01**: Project bootstrapped with Next.js 16 App Router, TypeScript, Tailwind CSS v4
 - [ ] **FOUN-02**: i18n routing architecture established (`app/[lang]/`) with next-intl — English only, strings externalized
 - [ ] **FOUN-03**: Content storage structure defined — MDX files with frontmatter in `/content/` directories
 - [ ] **FOUN-04**: Content access layer (`lib/content/`) with typed functions for reading/listing content
@@ -116,7 +116,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUN-01 | Phase 1 | Pending |
+| FOUN-01 | Phase 1 | Complete |
 | FOUN-02 | Phase 1 | Pending |
 | FOUN-03 | Phase 1 | Pending |
 | FOUN-04 | Phase 1 | Pending |
