@@ -13,7 +13,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **FOUN-02**: i18n routing architecture established (`app/[lang]/`) with next-intl — English only, strings externalized
 - [ ] **FOUN-03**: Content storage structure defined — MDX files with frontmatter in `/content/` directories
 - [ ] **FOUN-04**: Content access layer (`lib/content/`) with typed functions for reading/listing content
-- [ ] **FOUN-05**: SEO pipeline established — per-page metadata, Open Graph tags, robots.txt, sitemap.xml
+- [x] **FOUN-05**: SEO pipeline established — per-page metadata, Open Graph tags, robots.txt, sitemap.xml
 
 ### Navigation
 
@@ -120,7 +120,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUN-02 | Phase 1 | Pending |
 | FOUN-03 | Phase 1 | Pending |
 | FOUN-04 | Phase 1 | Pending |
-| FOUN-05 | Phase 1 | Pending |
+| FOUN-05 | Phase 1 | Complete |
 | BRAN-01 | Phase 2 | Pending |
 | BRAN-02 | Phase 2 | Pending |
 | BRAN-03 | Phase 2 | Pending |
