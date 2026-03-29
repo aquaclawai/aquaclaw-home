@@ -3,7 +3,7 @@ import 'server-only'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { DiaryFrontmatterSchema, type DiaryFrontmatter } from './schemas.js'
+import { DiaryFrontmatterSchema, type DiaryFrontmatter } from './schemas'
 
 export interface DiaryEntry extends DiaryFrontmatter {
   slug: string

@@ -3,7 +3,7 @@ import 'server-only'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { SkillFrontmatterSchema, type SkillFrontmatter } from './schemas.js'
+import { SkillFrontmatterSchema, type SkillFrontmatter } from './schemas'
 
 export interface SkillEntry extends SkillFrontmatter {
   slug: string

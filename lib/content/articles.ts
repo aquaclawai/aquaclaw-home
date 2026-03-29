@@ -3,7 +3,7 @@ import 'server-only'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { ArticleFrontmatterSchema, type ArticleFrontmatter } from './schemas.js'
+import { ArticleFrontmatterSchema, type ArticleFrontmatter } from './schemas'
 
 export interface ArticleEntry extends ArticleFrontmatter {
   slug: string

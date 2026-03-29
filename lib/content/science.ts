@@ -3,7 +3,7 @@ import 'server-only'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { ScienceFrontmatterSchema, type ScienceFrontmatter } from './schemas.js'
+import { ScienceFrontmatterSchema, type ScienceFrontmatter } from './schemas'
 
 export interface ScienceEntry extends ScienceFrontmatter {
   slug: string
