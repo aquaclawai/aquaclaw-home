@@ -40,8 +40,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [x] 01-01-PLAN.md — Bootstrap Next.js 16 project with all dependencies, strict TypeScript, Turbopack MDX config, and vitest test scaffold
-- [ ] 01-02-PLAN.md — i18n routing layer: next-intl middleware, app/[lang]/ routes, getDictionary server-only loader, seeded en.json dictionary
-- [ ] 01-03-PLAN.md — Typed content access layer: Zod schemas for all four content types, lib/content/ accessor functions, content directories with day-001.mdx
+- [x] 01-02-PLAN.md — i18n routing layer: next-intl middleware, app/[lang]/ routes, getDictionary server-only loader, seeded en.json dictionary
+- [x] 01-03-PLAN.md — Typed content access layer: Zod schemas for all four content types, lib/content/ accessor functions, content directories with day-001.mdx
 - [ ] 01-04-PLAN.md — SEO pipeline: app/sitemap.ts, app/robots.ts, /en/test proof-of-concept page with generateMetadata and OG tags
 
 ### Phase 2: Design System
