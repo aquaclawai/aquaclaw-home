@@ -54,8 +54,13 @@ Plans:
   3. A sample page viewed on mobile (375px), tablet (768px), and desktop (1280px) shows correct responsive layout with no horizontal overflow
   4. A demo component using the Tailwind v4 color tokens and typography scale matches the Bold & Playful design spec (bright palette, rounded shapes, readable prose)
   5. CSS-only animations (`transform`/`opacity` only) run on the demo page with no layout shift or janky repaints
-**Plans**: TBD
+**Plans**: 3 plans
 **UI hint**: yes
+
+Plans:
+- [ ] 02-01-PLAN.md — Design tokens, typography, and animation keyframes in globals.css + font loading in layout.tsx
+- [ ] 02-02-PLAN.md — Pixel-art mascot assets (4 poses), MascotImage component, and mascot-derived favicon
+- [ ] 02-03-PLAN.md — Design system showcase page at /en/design-system with visual verification checkpoint
 
 ### Phase 3: Navigation Shell
 **Goal**: Every page on the site has a complete, working navigation shell — visitors can always find their way and the site feels structurally complete
@@ -169,7 +174,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/4 | Not started | - |
-| 2. Design System | 0/TBD | Not started | - |
+| 2. Design System | 0/3 | Not started | - |
 | 3. Navigation Shell | 0/TBD | Not started | - |
 | 4. Diary Section | 0/TBD | Not started | - |
 | 5. Articles Section | 0/TBD | Not started | - |
