@@ -17,9 +17,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Navigation
 
-- [ ] **NAV-01**: Fixed top navigation bar with logo, main section links (Diary, Articles, Science, Skills, OpenClaw)
+- [x] **NAV-01**: Fixed top navigation bar with logo, main section links (Diary, Articles, Science, Skills, OpenClaw)
 - [ ] **NAV-02**: Mobile hamburger menu with animated open/close
-- [ ] **NAV-03**: Comprehensive footer with sitemap links, social icons, copyright
+- [x] **NAV-03**: Comprehensive footer with sitemap links, social icons, copyright
 - [ ] **NAV-04**: Custom 404 page with mascot and navigation back to homepage
 
 ### Diary
@@ -127,9 +127,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | BRAN-04 | Phase 2 | Pending |
 | BRAN-05 | Phase 2 | Complete |
 | BRAN-06 | Phase 2 | Complete |
-| NAV-01 | Phase 3 | Pending |
+| NAV-01 | Phase 3 | Complete |
 | NAV-02 | Phase 3 | Pending |
-| NAV-03 | Phase 3 | Pending |
+| NAV-03 | Phase 3 | Complete |
 | NAV-04 | Phase 3 | Pending |
 | DIAR-01 | Phase 4 | Pending |
 | DIAR-02 | Phase 4 | Pending |
