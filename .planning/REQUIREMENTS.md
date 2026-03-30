@@ -56,12 +56,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Branding & UI
 
-- [ ] **BRAN-01**: Bold & Playful design system — bright color palette, rounded shapes, playful micro-animations
+- [x] **BRAN-01**: Bold & Playful design system — bright color palette, rounded shapes, playful micro-animations
 - [ ] **BRAN-02**: Pixel-art light brown Garfield cat mascot integrated on homepage, nav, and key pages
 - [ ] **BRAN-03**: Pixel-art mascot favicon in browser tab
 - [ ] **BRAN-04**: Responsive design — mobile, tablet, and desktop breakpoints
-- [ ] **BRAN-05**: Readable typography — font pairing, comfortable line-height, max-width prose container
-- [ ] **BRAN-06**: CSS-only animations using transform/opacity — no JS animation loops
+- [x] **BRAN-05**: Readable typography — font pairing, comfortable line-height, max-width prose container
+- [x] **BRAN-06**: CSS-only animations using transform/opacity — no JS animation loops
 
 ### OpenClaw
 
@@ -121,12 +121,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUN-03 | Phase 1 | Pending |
 | FOUN-04 | Phase 1 | Pending |
 | FOUN-05 | Phase 1 | Complete |
-| BRAN-01 | Phase 2 | Pending |
+| BRAN-01 | Phase 2 | Complete |
 | BRAN-02 | Phase 2 | Pending |
 | BRAN-03 | Phase 2 | Pending |
 | BRAN-04 | Phase 2 | Pending |
-| BRAN-05 | Phase 2 | Pending |
-| BRAN-06 | Phase 2 | Pending |
+| BRAN-05 | Phase 2 | Complete |
+| BRAN-06 | Phase 2 | Complete |
 | NAV-01 | Phase 3 | Pending |
 | NAV-02 | Phase 3 | Pending |
 | NAV-03 | Phase 3 | Pending |

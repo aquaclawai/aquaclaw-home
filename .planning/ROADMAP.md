@@ -58,7 +58,7 @@ Plans:
 **UI hint**: yes
 
 Plans:
-- [ ] 02-01-PLAN.md — Design tokens, typography, and animation keyframes in globals.css + font loading in layout.tsx
+- [x] 02-01-PLAN.md — Design tokens, typography, and animation keyframes in globals.css + font loading in layout.tsx
 - [ ] 02-02-PLAN.md — Pixel-art mascot assets (4 poses), MascotImage component, and mascot-derived favicon
 - [ ] 02-03-PLAN.md — Design system showcase page at /en/design-system with visual verification checkpoint
 
