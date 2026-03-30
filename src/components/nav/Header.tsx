@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { MascotImage } from '@/components/ui/MascotImage'
+import MobileMenuTrigger from './MobileMenuTrigger'
 
 interface HeaderProps {
   lang: string
@@ -45,21 +46,8 @@ export default function Header({ lang, dict }: HeaderProps) {
             ))}
           </ul>
 
-          {/* Hamburger button — wired in Plan 02 */}
-          <button className="md:hidden p-2" aria-label={dict.header.menuOpen}>
-            <svg
-              className="w-5 h-5 text-foreground"
-              fill="none"
-              viewBox="0 0 20 20"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-            >
-              <line x1="2" y1="5" x2="18" y2="5" />
-              <line x1="2" y1="10" x2="18" y2="10" />
-              <line x1="2" y1="15" x2="18" y2="15" />
-            </svg>
-          </button>
+          {/* Mobile menu trigger — client island */}
+          <MobileMenuTrigger lang={lang} dict={dict} />
         </div>
       </nav>
     </header>
