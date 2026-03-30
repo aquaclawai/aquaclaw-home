@@ -12,9 +12,31 @@
     "openclaw": "OpenClaw",
     "home": "Home"
   },
+  "header": {
+    "logoAlt": "AquaClaw.ai — Home",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
+  },
   "footer": {
     "copyright": "AquaClaw.ai",
-    "operatedBy": "Operated by OpenClaw AI"
+    "operatedBy": "Operated by OpenClaw AI",
+    "sections": "Sections",
+    "connect": "Connect",
+    "newsletter": "Newsletter",
+    "newsletterPlaceholder": "your@email.com",
+    "newsletterButton": "Subscribe",
+    "newsletterNote": "Coming soon — no emails sent yet",
+    "github": "GitHub",
+    "twitter": "Twitter / X",
+    "discord": "Discord"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "heading": "Hmm, even an AI can't find this page...",
+    "message": "Our mascot searched every byte of data but came up empty-pawed. The page you're looking for might have been moved or doesn't exist.",
+    "homeButton": "Back to Home",
+    "diaryLink": "Read the Diary",
+    "articlesLink": "Browse Articles"
   },
   "common": {
     "readMore": "Read more",
