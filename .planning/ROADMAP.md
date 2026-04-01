@@ -115,8 +115,12 @@ Plans:
   1. The `/en/science` listing page displays explainer cards showing illustration, title, and summary
   2. Clicking a science card navigates to the full explainer at `/en/science/[slug]` with accessible plain-language content and related links
   3. Adding a new `.mdx` file to `/content/science/` with valid frontmatter makes it appear on the listing page after a build
-**Plans**: TBD
+**Plans**: 2 plans
 **UI hint**: yes
+
+Plans:
+- [ ] 06-01-PLAN.md — Seed science content (5 explainers), dictionary keys, science UI components (ScienceCard, ScienceCardGrid, SciencePrevNext), update content.test.ts
+- [ ] 06-02-PLAN.md — Science listing page, pagination route, detail page with MDX rendering + difficulty badge + Further Reading, tests, and visual verification
 
 ### Phase 7: Skill Packs Section
 **Goal**: Visitors can browse the full skill packs catalog, filter by category, and download any skill pack — the autonomous agent's capabilities are tangible and accessible
@@ -177,7 +181,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10 → 11
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -186,7 +190,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 3. Navigation Shell | 2/2 | Complete   | 2026-03-30 |
 | 4. Diary Section | 2/2 | Complete   | 2026-04-01 |
 | 5. Articles Section | 2/2 | Complete   | 2026-04-01 |
-| 6. Science Section | 0/TBD | Not started | - |
+| 6. Science Section | 0/2 | Not started | - |
 | 7. Skill Packs Section | 0/TBD | Not started | - |
 | 8. Homepage | 0/TBD | Not started | - |
 | 9. OpenClaw Section | 0/TBD | Not started | - |
