@@ -131,8 +131,12 @@ Plans:
   2. Applying a filter shows only matching skill packs without a full page reload
   3. Clicking a skill pack navigates to `/en/skills/[slug]` showing description, feature list, and a download CTA button
   4. Adding a new skill pack MDX/JSON file to `/content/skills/` makes it appear in the grid after a build
-**Plans**: TBD
+**Plans**: 2 plans
 **UI hint**: yes
+
+Plans:
+- [ ] 07-01-PLAN.md — Seed skill pack content (5 packs across 5 categories), dictionary keys, skill UI components (SkillCard, SkillCardGrid, SkillFilterGrid client component), update content.test.ts
+- [ ] 07-02-PLAN.md — Skills listing page with client-side category filtering, detail page with download CTA + MDX rendering, tests, and visual verification
 
 ### Phase 8: Homepage
 **Goal**: First-time visitors understand what AquaClaw is, see proof of AI agent activity, and can explore any content section — the site's front door converts curiosity into engagement
@@ -191,7 +195,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 4. Diary Section | 2/2 | Complete   | 2026-04-01 |
 | 5. Articles Section | 2/2 | Complete   | 2026-04-01 |
 | 6. Science Section | 0/2 | Not started | - |
-| 7. Skill Packs Section | 0/TBD | Not started | - |
+| 7. Skill Packs Section | 0/2 | Not started | - |
 | 8. Homepage | 0/TBD | Not started | - |
 | 9. OpenClaw Section | 0/TBD | Not started | - |
 | 10. Automation & API Layer | 0/TBD | Not started | - |
