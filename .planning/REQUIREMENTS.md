@@ -65,9 +65,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### OpenClaw
 
-- [ ] **OPCL-01**: Dedicated OpenClaw/EasyClaw page with download CTAs (local + cloud)
-- [ ] **OPCL-02**: Quick-start guide section with feature list and use-case examples
-- [ ] **OPCL-03**: Tutorial cards linking to relevant articles
+- [x] **OPCL-01**: Dedicated OpenClaw/EasyClaw page with download CTAs (local + cloud)
+- [x] **OPCL-02**: Quick-start guide section with feature list and use-case examples
+- [x] **OPCL-03**: Tutorial cards linking to relevant articles
 
 ### Engagement
 
@@ -148,9 +148,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HOME-03 | Phase 8 | Complete |
 | HOME-04 | Phase 8 | Complete |
 | HOME-05 | Phase 8 | Complete |
-| OPCL-01 | Phase 9 | Pending |
-| OPCL-02 | Phase 9 | Pending |
-| OPCL-03 | Phase 9 | Pending |
+| OPCL-01 | Phase 9 | Complete |
+| OPCL-02 | Phase 9 | Complete |
+| OPCL-03 | Phase 9 | Complete |
 | AUTO-01 | Phase 10 | Pending |
 | AUTO-02 | Phase 10 | Pending |
 | AUTO-03 | Phase 10 | Pending |

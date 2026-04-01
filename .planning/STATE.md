@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Phase 9 context gathered
-last_updated: "2026-04-01T17:15:24.567Z"
+stopped_at: Completed 09-openclaw-section-01-PLAN.md
+last_updated: "2026-04-01T17:26:23.403Z"
 last_activity: 2026-04-01
 progress:
   total_phases: 11
-  completed_phases: 8
-  total_plans: 19
-  completed_plans: 19
+  completed_phases: 9
+  total_plans: 20
+  completed_plans: 20
   percent: 100
 ---
 
@@ -70,6 +70,7 @@ Progress: [██████████] 100%
 | Phase 07-skill-packs-section P02 | 12min | 2 tasks | 3 files |
 | Phase 08-homepage P01 | 7 | 2 tasks | 5 files |
 | Phase 08-homepage P02 | 8min | 3 tasks | 3 files |
+| Phase 09-openclaw-section P01 | 2min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -125,6 +126,8 @@ Recent decisions affecting current work:
 - [Phase 08-homepage]: ValuePropGrid accepts narrow dict prop shape (not full dict) to keep component self-contained and reusable
 - [Phase 08-homepage]: import type used for DiaryEntry in DiaryCarousel — prevents server-only guard triggering in client bundle
 - [Phase 08-homepage]: Homepage page.tsx fetches all 4 content types server-side once and passes serialized slices to client islands
+- [Phase 09-openclaw-section]: typeof en[openclaw][download] used for DownloadSection prop type — avoids manual interface duplication and stays in sync with JSON
+- [Phase 09-openclaw-section]: Tutorial articles filtered server-side by hardcoded slug list — curated selection, not all articles
 
 ### Pending Todos
 
@@ -138,6 +141,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-01T17:15:24.564Z
-Stopped at: Phase 9 context gathered
-Resume file: .planning/phases/09-openclaw-section/09-CONTEXT.md
+Last session: 2026-04-01T17:26:23.401Z
+Stopped at: Completed 09-openclaw-section-01-PLAN.md
+Resume file: None
