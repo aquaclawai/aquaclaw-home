@@ -59,7 +59,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **BRAN-01**: Bold & Playful design system — bright color palette, rounded shapes, playful micro-animations
 - [x] **BRAN-02**: Pixel-art light brown Garfield cat mascot integrated on homepage, nav, and key pages
 - [x] **BRAN-03**: Pixel-art mascot favicon in browser tab
-- [ ] **BRAN-04**: Responsive design — mobile, tablet, and desktop breakpoints
+- [x] **BRAN-04**: Responsive design — mobile, tablet, and desktop breakpoints
 - [x] **BRAN-05**: Readable typography — font pairing, comfortable line-height, max-width prose container
 - [x] **BRAN-06**: CSS-only animations using transform/opacity — no JS animation loops
 
@@ -124,7 +124,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | BRAN-01 | Phase 2 | Complete |
 | BRAN-02 | Phase 2 | Complete |
 | BRAN-03 | Phase 2 | Complete |
-| BRAN-04 | Phase 2 | Pending |
+| BRAN-04 | Phase 2 | Complete |
 | BRAN-05 | Phase 2 | Complete |
 | BRAN-06 | Phase 2 | Complete |
 | NAV-01 | Phase 3 | Complete |
