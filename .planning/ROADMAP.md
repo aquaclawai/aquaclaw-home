@@ -177,7 +177,10 @@ Plans:
   1. Content directories (`/content/diary/`, `/content/articles/`, `/content/science/`, `/content/skills/`) exist with documented structure and an example file in each
   2. Submitting an MDX file with missing or malformed frontmatter fields causes the build to fail with a descriptive Zod validation error
   3. Calling `POST /api/revalidate` with the correct secret token triggers ISR revalidation and the new content appears on the live site within 60 seconds without a full rebuild
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 10-01-PLAN.md — ISR revalidation webhook endpoint with secret token auth, tests, and CONTENT_GUIDE.md documenting the content pipeline for OpenClaw
 
 ### Phase 11: Engagement & Polish
 **Goal**: Readers can comment on diary and article pages, content is available as RSS feeds, and the site passes launch-readiness checks — v1 ships with all engagement hooks in place
@@ -205,5 +208,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 7. Skill Packs Section | 1/2 | In Progress|  |
 | 8. Homepage | 2/2 | Complete   | 2026-04-01 |
 | 9. OpenClaw Section | 1/1 | Complete   | 2026-04-01 |
-| 10. Automation & API Layer | 0/TBD | Not started | - |
+| 10. Automation & API Layer | 0/1 | Not started | - |
 | 11. Engagement & Polish | 0/TBD | Not started | - |
