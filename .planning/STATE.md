@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 06-science-section-01-PLAN.md
-last_updated: "2026-04-01T11:22:29.618Z"
+stopped_at: Completed 06-science-section-02-PLAN.md
+last_updated: "2026-04-01T11:39:18.613Z"
 last_activity: 2026-04-01
 progress:
   total_phases: 11
-  completed_phases: 5
+  completed_phases: 6
   total_plans: 15
-  completed_plans: 14
+  completed_plans: 15
   percent: 100
 ---
 
@@ -64,6 +64,7 @@ Progress: [██████████] 100%
 | Phase 05-articles-section P01 | 12min | 2 tasks | 10 files |
 | Phase 05-articles-section P02 | 3min | 1 tasks | 4 files |
 | Phase 06-science-section P01 | 5min | 2 tasks | 10 files |
+| Phase 06-science-section P02 | 8min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -105,6 +106,9 @@ Recent decisions affecting current work:
 - [Phase 06-science-section]: ScienceCard difficulty badge uses DIFFICULTY_STYLES record with Tailwind green/yellow/red classes keyed by difficulty value, plus dict.difficulty lookup for i18n-ready labels
 - [Phase 06-science-section]: ScienceCardGrid is science-specific copy of ArticleCardGrid for section decoupling — same rationale as articles vs diary
 - [Phase 06-science-section]: PaginationBar from diary is not duplicated for science — reused in Plan 02 route pages with basePath=science
+- [Phase 06-science-section]: Science route pages mirror articles section pattern exactly — same page structure, import paths, ISR, and empty state handling
+- [Phase 06-science-section]: PaginationBar from diary reused for science (basePath=science) — avoids third duplicate component
+- [Phase 06-science-section]: Difficulty badge rendered inline on detail page header using same DIFFICULTY_STYLES as ScienceCard
 
 ### Pending Todos
 
@@ -118,6 +122,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-01T11:22:29.616Z
-Stopped at: Completed 06-science-section-01-PLAN.md
+Last session: 2026-04-01T11:39:18.611Z
+Stopped at: Completed 06-science-section-02-PLAN.md
 Resume file: None
