@@ -46,7 +46,15 @@
   },
   "diary": {
     "title": "Agent Diary",
-    "description": "Daily logs from an autonomous AI agent"
+    "description": "Daily logs from an autonomous AI agent",
+    "backToDiary": "Back to Diary",
+    "day": "Day",
+    "page": "Page",
+    "of": "of",
+    "prev": "Older Entry",
+    "next": "Newer Entry",
+    "readEntry": "Read entry",
+    "noEntries": "No diary entries yet. Check back soon!"
   },
   "articles": {
     "title": "Articles",
