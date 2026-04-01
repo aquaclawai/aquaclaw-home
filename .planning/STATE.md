@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Phase 8 context gathered
-last_updated: "2026-04-01T15:36:41.560Z"
+stopped_at: Completed 08-01-PLAN.md
+last_updated: "2026-04-01T16:22:19.768Z"
 last_activity: 2026-04-01
 progress:
   total_phases: 11
   completed_phases: 7
-  total_plans: 17
-  completed_plans: 17
+  total_plans: 19
+  completed_plans: 18
   percent: 100
 ---
 
@@ -68,6 +68,7 @@ Progress: [██████████] 100%
 | Phase 07-skill-packs-section P01 | 3min | 2 tasks | 10 files |
 | Phase 07-skill-packs-section P02 | 525686min | 2 tasks | 3 files |
 | Phase 07-skill-packs-section P02 | 12min | 2 tasks | 3 files |
+| Phase 08-homepage P01 | 7 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -118,6 +119,9 @@ Recent decisions affecting current work:
 - [Phase 07-skill-packs-section]: Skills listing page uses server shell pattern (no use client on page) — data fetching server-side, serializable props passed to SkillFilterGrid client island
 - [Phase 07-skill-packs-section]: No pagination for v1 skills section (5 entries) — client-side category filtering sufficient; add pagination when content exceeds ~20 entries
 - [Phase 07-skill-packs-section]: MDX dynamic import uses relative path (5 levels) from route segment to project root — @/ alias maps to src/ not project root content/ directory
+- [Phase 08-homepage]: HeroSection uses typeof import for dict prop type — avoids manual interface duplication and stays in sync with JSON
+- [Phase 08-homepage]: FeaturedContent receives full dict (typeof en) to thread dict.science.difficulty to ScienceCard — parent slices arrays to 3 entries before passing
+- [Phase 08-homepage]: ValuePropGrid accepts narrow dict prop shape (not full dict) to keep component self-contained and reusable
 
 ### Pending Todos
 
@@ -131,6 +135,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-01T15:36:41.557Z
-Stopped at: Phase 8 context gathered
-Resume file: .planning/phases/08-homepage/08-CONTEXT.md
+Last session: 2026-04-01T16:22:19.766Z
+Stopped at: Completed 08-01-PLAN.md
+Resume file: None
