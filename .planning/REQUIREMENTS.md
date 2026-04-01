@@ -38,7 +38,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **SCIE-01**: Science/Education listing page with explainer cards — illustration, title, summary
 - [ ] **SCIE-02**: Individual science explainer detail page with accessible language and related links
-- [ ] **SCIE-03**: Science content stored as MDX files with structured frontmatter
+- [x] **SCIE-03**: Science content stored as MDX files with structured frontmatter
 
 ### Skill Packs
 
@@ -139,7 +139,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ARTC-03 | Phase 5 | Complete |
 | SCIE-01 | Phase 6 | Pending |
 | SCIE-02 | Phase 6 | Pending |
-| SCIE-03 | Phase 6 | Pending |
+| SCIE-03 | Phase 6 | Complete |
 | SKIL-01 | Phase 7 | Pending |
 | SKIL-02 | Phase 7 | Pending |
 | SKIL-03 | Phase 7 | Pending |
