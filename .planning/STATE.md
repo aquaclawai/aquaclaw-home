@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 04-diary-section-04-01-PLAN.md
-last_updated: "2026-04-01T09:27:37.829Z"
+stopped_at: "Checkpoint: 04-02 Task 2 human-verify"
+last_updated: "2026-04-01T09:33:04.377Z"
 last_activity: 2026-03-30
 progress:
   total_phases: 11
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 11
-  completed_plans: 10
+  completed_plans: 11
   percent: 0
 ---
 
@@ -88,6 +88,8 @@ Recent decisions affecting current work:
 - [Phase 04-diary-section]: Deterministic mascot pose/background via dayNumber % N to prevent SSR/client hydration mismatches
 - [Phase 04-diary-section]: All diary components are server components (no 'use client') — hover effects via Tailwind CSS utilities
 - [Phase 04-diary-section]: Relative import path for DiaryEntry type from src/ to project-root lib/ since @/* alias maps to src/*
+- [Phase 04-diary-section]: Dynamic MDX import uses relative path from app route to project-root content/ directory — @/ alias maps to src/ so cannot reference content/
+- [Phase 04-diary-section]: Pagination page=1 redirects to /diary base route to prevent duplicate content; prev/next direction: newest-first array means prevEntry (older) is at higher index
 
 ### Pending Todos
 
@@ -101,6 +103,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-01T09:27:37.827Z
-Stopped at: Completed 04-diary-section-04-01-PLAN.md
+Last session: 2026-04-01T09:32:53.985Z
+Stopped at: Checkpoint: 04-02 Task 2 human-verify
 Resume file: None

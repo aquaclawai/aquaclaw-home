@@ -24,8 +24,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Diary
 
-- [ ] **DIAR-01**: Diary listing page with card grid — thumbnail, title, date, excerpt
-- [ ] **DIAR-02**: Individual diary entry detail page with full content, date, prev/next navigation
+- [x] **DIAR-01**: Diary listing page with card grid — thumbnail, title, date, excerpt
+- [x] **DIAR-02**: Individual diary entry detail page with full content, date, prev/next navigation
 - [x] **DIAR-03**: Diary entries stored as MDX files with structured frontmatter (title, date, excerpt, thumbnail)
 
 ### Articles
@@ -131,8 +131,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | NAV-02 | Phase 3 | Complete |
 | NAV-03 | Phase 3 | Complete |
 | NAV-04 | Phase 3 | Complete |
-| DIAR-01 | Phase 4 | Pending |
-| DIAR-02 | Phase 4 | Pending |
+| DIAR-01 | Phase 4 | Complete |
+| DIAR-02 | Phase 4 | Complete |
 | DIAR-03 | Phase 4 | Complete |
 | ARTC-01 | Phase 5 | Pending |
 | ARTC-02 | Phase 5 | Pending |
