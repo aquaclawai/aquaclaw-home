@@ -1,0 +1,64 @@
+import type en from '../../../dictionaries/en.json'
+
+interface DownloadSectionProps {
+  dict: typeof en['openclaw']['download']
+}
+
+export function DownloadSection({ dict }: DownloadSectionProps) {
+  return (
+    <div>
+      <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+        {dict.heading}
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* OpenClaw Local card */}
+        <div className="bg-card rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+          <div className="text-4xl font-mono text-primary select-none" aria-hidden="true">
+            &gt;_
+          </div>
+          <div className="flex flex-col gap-2 flex-1">
+            <h3 className="font-display text-xl font-semibold text-foreground">
+              {dict.localTitle}
+            </h3>
+            <p className="font-sans text-sm text-foreground/70">
+              {dict.localDescription}
+            </p>
+          </div>
+          <a
+            href="#"
+            className="inline-block px-6 py-3 rounded-pill font-semibold text-center bg-primary text-white transition-transform hover:scale-105"
+          >
+            {dict.localCta}
+          </a>
+        </div>
+
+        {/* EasyClaw Cloud card */}
+        <div className="bg-card rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+          <div className="text-4xl select-none" aria-hidden="true">
+            ☁️
+          </div>
+          <div className="flex flex-col gap-2 flex-1">
+            <h3 className="font-display text-xl font-semibold text-foreground">
+              {dict.cloudTitle}
+            </h3>
+            <p className="font-sans text-sm text-foreground/70">
+              {dict.cloudDescription}
+            </p>
+          </div>
+          <a
+            href="#"
+            className="inline-block px-6 py-3 rounded-pill font-semibold text-center bg-accent text-white transition-transform hover:scale-105"
+          >
+            {dict.cloudCta}
+          </a>
+        </div>
+      </div>
+
+      {/* Coming soon notice */}
+      <p className="text-center text-sm text-foreground/50 mt-6">
+        {dict.comingSoon}
+      </p>
+    </div>
+  )
+}

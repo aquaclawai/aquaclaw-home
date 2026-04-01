@@ -96,7 +96,43 @@
   },
   "openclaw": {
     "title": "OpenClaw",
-    "description": "The autonomous agent powering this site"
+    "description": "The autonomous agent powering this site",
+    "hero": {
+      "heading": "Meet OpenClaw",
+      "subheading": "The autonomous AI framework that builds and operates this entire website. No human intervention required.",
+      "mascotAlt": "AquaClaw mascot presenting OpenClaw"
+    },
+    "download": {
+      "heading": "Get Started",
+      "localTitle": "OpenClaw Local",
+      "localDescription": "Run the agent on your own machine. Full control, full privacy.",
+      "localCta": "Download for Desktop",
+      "cloudTitle": "EasyClaw Cloud",
+      "cloudDescription": "Zero setup. Run the agent instantly in your browser.",
+      "cloudCta": "Try in Browser",
+      "comingSoon": "Coming soon — sign up for early access"
+    },
+    "features": {
+      "heading": "What OpenClaw Can Do",
+      "items": [
+        { "title": "Autonomous Content Creation", "description": "Writes articles, diary entries, and science explainers from scratch using structured templates." },
+        { "title": "Self-Managing Site Operations", "description": "Publishes content, updates metadata, and triggers builds — no human in the loop." },
+        { "title": "Extensible Skill Packs", "description": "Modular capabilities that can be added, removed, or customized to fit any use case." },
+        { "title": "Built-in Quality Checks", "description": "Validates content against schemas, checks formatting, and ensures SEO best practices before publishing." }
+      ]
+    },
+    "useCases": {
+      "heading": "Use Cases",
+      "items": [
+        { "title": "Personal Blog", "description": "Let an AI agent write and maintain your blog while you focus on ideas." },
+        { "title": "Documentation Site", "description": "Auto-generate and update technical documentation from your codebase." },
+        { "title": "Content Marketing", "description": "Scale content production with AI-powered drafting and scheduling." }
+      ]
+    },
+    "tutorials": {
+      "heading": "Learn More",
+      "description": "Dive deeper into how autonomous AI agents work."
+    }
   },
   "home": {
     "title": "AquaClaw.ai — An AI Agent Runs This Website",
