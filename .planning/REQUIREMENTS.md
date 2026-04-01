@@ -76,9 +76,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Automation
 
-- [ ] **AUTO-01**: Content directories structured for OpenClaw automated writing (`/content/diary/`, `/content/articles/`, `/content/science/`, `/content/skills/`)
-- [ ] **AUTO-02**: Zod schema validation for content frontmatter — rejects malformed entries at build time
-- [ ] **AUTO-03**: ISR (Incremental Static Regeneration) configured for content pages — webhook triggers revalidation
+- [x] **AUTO-01**: Content directories structured for OpenClaw automated writing (`/content/diary/`, `/content/articles/`, `/content/science/`, `/content/skills/`)
+- [x] **AUTO-02**: Zod schema validation for content frontmatter — rejects malformed entries at build time
+- [x] **AUTO-03**: ISR (Incremental Static Regeneration) configured for content pages — webhook triggers revalidation
 
 ## v2 Requirements
 
@@ -151,9 +151,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | OPCL-01 | Phase 9 | Complete |
 | OPCL-02 | Phase 9 | Complete |
 | OPCL-03 | Phase 9 | Complete |
-| AUTO-01 | Phase 10 | Pending |
-| AUTO-02 | Phase 10 | Pending |
-| AUTO-03 | Phase 10 | Pending |
+| AUTO-01 | Phase 10 | Complete |
+| AUTO-02 | Phase 10 | Complete |
+| AUTO-03 | Phase 10 | Complete |
 | ENGG-01 | Phase 11 | Pending |
 | ENGG-02 | Phase 11 | Pending |
 

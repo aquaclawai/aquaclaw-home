@@ -21,7 +21,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 7: Skill Packs Section** - Skill packs browser with category filtering and individual detail pages
 - [x] **Phase 8: Homepage** - Hero, animated stats counter, diary carousel, value proposition grid, and featured content sections (completed 2026-04-01)
 - [x] **Phase 9: OpenClaw Section** - Dedicated OpenClaw/EasyClaw download page, quick-start guide, and tutorial cards (completed 2026-04-01)
-- [ ] **Phase 10: Automation & API Layer** - ISR revalidation webhook, Zod schema validation, and structured content directories
+- [x] **Phase 10: Automation & API Layer** - ISR revalidation webhook, Zod schema validation, and structured content directories (completed 2026-04-01)
 - [ ] **Phase 11: Engagement & Polish** - Giscus comment system, RSS/Atom feeds, and launch-readiness checks
 
 ## Phase Details
@@ -208,5 +208,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 7. Skill Packs Section | 1/2 | In Progress|  |
 | 8. Homepage | 2/2 | Complete   | 2026-04-01 |
 | 9. OpenClaw Section | 1/1 | Complete   | 2026-04-01 |
-| 10. Automation & API Layer | 0/1 | Not started | - |
+| 10. Automation & API Layer | 1/1 | Complete   | 2026-04-01 |
 | 11. Engagement & Polish | 0/TBD | Not started | - |
