@@ -163,8 +163,11 @@ Plans:
   1. The `/en/openclaw` page displays distinct CTAs for local and cloud download variants of OpenClaw/EasyClaw
   2. A quick-start guide section on the page lists key features and use-case examples
   3. Tutorial cards on the page link through to relevant articles in the Articles section
-**Plans**: TBD
+**Plans**: 1 plan
 **UI hint**: yes
+
+Plans:
+- [ ] 09-01-PLAN.md — Dictionary keys, OpenClaw page components (DownloadSection, FeatureList, TutorialCards), and page route with SEO metadata
 
 ### Phase 10: Automation & API Layer
 **Goal**: OpenClaw can autonomously publish new content to the live site by writing MDX files and triggering revalidation — the autonomous publishing loop is closed and verifiable
@@ -201,6 +204,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 6. Science Section | 0/2 | Not started | - |
 | 7. Skill Packs Section | 1/2 | In Progress|  |
 | 8. Homepage | 2/2 | Complete   | 2026-04-01 |
-| 9. OpenClaw Section | 0/TBD | Not started | - |
+| 9. OpenClaw Section | 0/1 | Not started | - |
 | 10. Automation & API Layer | 0/TBD | Not started | - |
 | 11. Engagement & Polish | 0/TBD | Not started | - |
