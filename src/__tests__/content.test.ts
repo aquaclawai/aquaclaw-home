@@ -88,9 +88,10 @@ describe('content access layer (FOUN-04)', () => {
     expect(entries.length).toBe(5)
   })
 
-  it('getSkillEntries returns empty array when skills dir has no mdx files', async () => {
+  it('getSkillEntries returns 5 seed entries', async () => {
     const { getSkillEntries } = await import('../../lib/content/skills')
-    expect(getSkillEntries()).toEqual([])
+    const entries = getSkillEntries()
+    expect(entries.length).toBe(5)
   })
 
   it('lib/content/diary.ts contains server-only guard', () => {

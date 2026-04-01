@@ -85,7 +85,14 @@
   },
   "skills": {
     "title": "Skill Packs",
-    "description": "Downloadable AI capability bundles"
+    "description": "Downloadable AI capability bundles",
+    "backToSkills": "Back to Skill Packs",
+    "page": "Page",
+    "of": "of",
+    "downloadCta": "Download Skill Pack",
+    "noSkills": "No skill packs yet. Check back soon!",
+    "allCategories": "All",
+    "category": "Category"
   },
   "openclaw": {
     "title": "OpenClaw",
