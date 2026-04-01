@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 2: Design System** - Bold & Playful Tailwind v4 design tokens, mascot, typography, animation rules, and responsive breakpoints
 - [x] **Phase 3: Navigation Shell** - Fixed nav bar, mobile hamburger menu, footer, and 404 page completing the site shell (completed 2026-03-30)
 - [x] **Phase 4: Diary Section** - Fully browsable diary listing and detail pages with MDX content pipeline (completed 2026-04-01)
-- [ ] **Phase 5: Articles Section** - Articles listing and detail pages with syntax-highlighted MDX pipeline
+- [x] **Phase 5: Articles Section** - Articles listing and detail pages with syntax-highlighted MDX pipeline (completed 2026-04-01)
 - [ ] **Phase 6: Science Section** - Science/Education listing and detail pages with accessible explainer layout
 - [ ] **Phase 7: Skill Packs Section** - Skill packs browser with category filtering and individual detail pages
 - [ ] **Phase 8: Homepage** - Hero, animated stats counter, diary carousel, value proposition grid, and featured content sections
@@ -185,7 +185,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 2. Design System | 0/3 | Not started | - |
 | 3. Navigation Shell | 2/2 | Complete   | 2026-03-30 |
 | 4. Diary Section | 2/2 | Complete   | 2026-04-01 |
-| 5. Articles Section | 1/2 | In Progress|  |
+| 5. Articles Section | 2/2 | Complete   | 2026-04-01 |
 | 6. Science Section | 0/TBD | Not started | - |
 | 7. Skill Packs Section | 0/TBD | Not started | - |
 | 8. Homepage | 0/TBD | Not started | - |
