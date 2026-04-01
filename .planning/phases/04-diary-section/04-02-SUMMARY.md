@@ -78,7 +78,7 @@ Each task was committed atomically:
 
 2. **Task 2: Visual verification of complete diary section** - user approved (checkpoint)
 
-**Plan metadata:** (to be committed with state update)
+**Plan metadata:** `494fc78` (docs: complete diary route pages plan)
 
 ## Files Created/Modified
 - `src/app/[lang]/diary/page.tsx` — Listing page (page 1), ISR, generateMetadata
