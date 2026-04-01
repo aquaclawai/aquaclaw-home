@@ -1,0 +1,185 @@
+---
+title: "What Is Prompt Engineering?"
+date: "2026-03-26"
+excerpt: "A beginner-friendly guide to prompt engineering — the art of crafting instructions that get the best results from AI language models."
+tags: ["ai", "prompts", "tutorial"]
+---
+
+# What Is Prompt Engineering?
+
+Every time you write a message to an AI assistant, you're doing prompt engineering — whether you know it or not. A prompt is simply the input you give to a language model. Prompt engineering is the practice of crafting prompts deliberately to get better, more reliable, more useful outputs.
+
+This guide covers the fundamentals: what makes prompts work, common techniques, and practical examples you can use right away.
+
+## Why Prompts Matter
+
+Language models are remarkably sensitive to how you phrase things. The same underlying question, framed differently, can produce wildly different results. Compare:
+
+```text
+Bad prompt:
+"Tell me about machine learning"
+
+Better prompt:
+"Explain the difference between supervised and unsupervised machine learning 
+to someone who has never studied statistics. Use two concrete examples."
+```
+
+The second prompt tells the model:
+- The specific question (supervised vs. unsupervised)
+- The audience (no statistics background)
+- The format (two concrete examples)
+
+Specificity is the single most important principle in prompt engineering.
+
+## Core Techniques
+
+### 1. Be Specific About Format
+
+If you want a list, ask for a list. If you want a table, ask for a table. If you want three sentences, say so.
+
+```text
+Vague: "Summarize the main points of this article"
+
+Specific: "Summarize the main points of this article in exactly 5 bullet points, 
+each no longer than one sentence"
+```
+
+Models don't know what format you want unless you tell them.
+
+### 2. Assign a Role
+
+Telling the model to adopt a specific role can dramatically improve the relevance and tone of its responses.
+
+```text
+"You are a senior software engineer with 15 years of experience in Python. 
+Review the following code and identify potential performance bottlenecks."
+```
+
+Role assignment is not magic — it works because the model has seen many examples of how domain experts communicate, and the role instruction activates those patterns.
+
+### 3. Provide Context and Examples
+
+Models generate text by predicting what comes next. If you give them examples of what you want, they will continue that pattern.
+
+This technique — providing examples in the prompt — is called **few-shot prompting**:
+
+```text
+Classify whether the following customer feedback is positive, negative, or neutral.
+
+Examples:
+Text: "Absolutely loved it, would buy again!" → Positive
+Text: "The product broke after two days." → Negative
+Text: "It arrived on time." → Neutral
+
+Now classify:
+Text: "The instructions were confusing but the product works well."
+```
+
+With examples, the model understands not just the task but the exact format you want and the level of nuance expected.
+
+### 4. Chain of Thought
+
+For complex reasoning tasks, asking the model to "think step by step" before giving an answer significantly improves accuracy. This is called **chain-of-thought prompting**:
+
+```text
+Poor results:
+"What is 17% of 340?"
+
+Better results:
+"What is 17% of 340? Think through this step by step."
+```
+
+Alternatively, you can use a zero-shot chain-of-thought trigger: just add "Let's think step by step." at the end of your prompt. Research shows this simple phrase reliably improves performance on multi-step reasoning problems.
+
+### 5. Set Constraints and Boundaries
+
+Constraints prevent the model from wandering. They're especially useful when you need focused, factual outputs:
+
+```text
+"Answer the following question using only information from the provided text. 
+If the answer is not in the text, say 'Not mentioned in the source.'
+
+Text: [your text here]
+
+Question: [your question here]"
+```
+
+This is called **grounded generation** — you're anchoring the model to a specific source and preventing hallucination.
+
+## Common Mistakes
+
+### Being Too Vague
+
+"Write something about AI" will produce generic filler. The more specific your prompt, the more useful the output.
+
+### Asking for Too Much at Once
+
+Complex, multi-part prompts often produce incomplete or confused responses. Break complex tasks into steps:
+
+```text
+Instead of:
+"Analyze this code for bugs, suggest refactoring improvements, 
+add documentation, and then convert it to TypeScript."
+
+Better:
+Step 1: "List all potential bugs in this code."
+Step 2: "Suggest refactoring improvements for readability."
+Step 3 (after reviewing): "Add JSDoc documentation."
+Step 4 (after reviewing): "Convert to TypeScript."
+```
+
+### Ignoring System Prompts
+
+Many AI interfaces let you set a "system prompt" — a set of instructions that apply to the entire conversation. Use this to establish consistent behavior:
+
+```text
+System prompt:
+"You are a concise technical writer. Always respond in plain English. 
+Avoid jargon unless the user asks for technical depth. 
+Keep responses under 200 words unless explicitly asked for more."
+```
+
+A well-crafted system prompt eliminates the need to repeat your preferences in every message.
+
+## Prompt Engineering in Practice
+
+Here is a practical prompt template that works well for analysis tasks:
+
+```text
+Context: [Describe the situation or background]
+
+Task: [What you want the model to do]
+
+Format: [How you want the output structured]
+
+Constraints: [What to include or avoid]
+
+Input: [The actual data, text, or question]
+```
+
+For example:
+
+```text
+Context: I am a developer reviewing a pull request for a Python web application.
+
+Task: Review the following function and identify any security vulnerabilities, 
+particularly around input validation and SQL injection risks.
+
+Format: Numbered list of issues. For each issue: name, severity (High/Medium/Low), 
+and one-sentence fix recommendation.
+
+Constraints: Focus only on security, not style or performance.
+
+Input:
+def get_user(username):
+    query = f"SELECT * FROM users WHERE username = '{username}'"
+    return db.execute(query)
+```
+
+This structure produces consistently useful, well-organized responses.
+
+## Where This Is Going
+
+Prompt engineering as a distinct skill may diminish as models get better at understanding intent from less specific instructions. But the underlying skill — communicating clearly, specifying constraints, providing context — will always matter when working with language models.
+
+The better you get at expressing exactly what you want, the more useful AI tools become. That's true whether you're writing a simple chatbot message or designing the system prompt for an autonomous agent like OpenClaw.

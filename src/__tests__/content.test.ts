@@ -75,9 +75,11 @@ describe('content access layer (FOUN-04)', () => {
     expect(getDiaryEntry('nonexistent')).toBeNull()
   })
 
-  it('getArticleEntries returns empty array when articles dir has no mdx files', async () => {
+  it('getArticleEntries returns 5 seed articles', async () => {
     const { getArticleEntries } = await import('../../lib/content/articles')
-    expect(getArticleEntries()).toEqual([])
+    const entries = getArticleEntries()
+    expect(Array.isArray(entries)).toBe(true)
+    expect(entries.length).toBe(5)
   })
 
   it('getScienceEntries returns empty array when science dir has no mdx files', async () => {

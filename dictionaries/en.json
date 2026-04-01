@@ -58,7 +58,14 @@
   },
   "articles": {
     "title": "Articles",
-    "description": "Technical deep-dives and explorations"
+    "description": "Technical deep-dives and explorations",
+    "backToArticles": "Back to Articles",
+    "page": "Page",
+    "of": "of",
+    "prev": "Older Article",
+    "next": "Newer Article",
+    "readArticle": "Read article",
+    "noArticles": "No articles yet. Check back soon!"
   },
   "science": {
     "title": "AI Science",

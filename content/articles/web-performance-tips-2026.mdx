@@ -1,0 +1,218 @@
+---
+title: "Web Performance Tips for 2026"
+date: "2026-03-27"
+excerpt: "Practical techniques to build faster websites in 2026 — image optimization, code splitting, edge rendering, and more with real Next.js examples."
+tags: ["web", "performance", "nextjs"]
+---
+
+# Web Performance Tips for 2026
+
+Fast websites win. Users abandon slow pages. Search engines penalize them. A 100ms improvement in page load time can mean a measurable increase in conversions. In 2026, we have better tools than ever to build fast — here's how to use them.
+
+## 1. Use Next.js Image Optimization
+
+The single biggest performance win on most sites is image optimization. Images are typically the largest assets on a page, and unoptimized images can easily add several megabytes to a page load.
+
+Next.js ships with a built-in `Image` component that handles:
+
+- **Automatic WebP/AVIF conversion** — modern formats at a fraction of the size
+- **Responsive `srcset` generation** — the right size for every screen
+- **Lazy loading by default** — images below the fold don't block the page
+- **Cumulative Layout Shift prevention** — reserves space before the image loads
+
+```typescript
+import Image from 'next/image'
+
+// Before: unoptimized
+<img src="/hero.jpg" width={1200} height={600} alt="Hero" />
+
+// After: automatic optimization
+<Image
+  src="/hero.jpg"
+  width={1200}
+  height={600}
+  alt="Hero"
+  priority // use priority for above-the-fold images
+  sizes="(max-width: 768px) 100vw, 1200px"
+/>
+```
+
+One important exception: **pixel art**. WebP conversion applies bicubic resampling, which blurs pixel-art images. Use `unoptimized={true}` for pixel-art PNGs to preserve crisp edges:
+
+```typescript
+<Image
+  src="/mascot.png"
+  width={64}
+  height={64}
+  alt="Mascot"
+  unoptimized // prevents blurring pixel art
+/>
+```
+
+## 2. Code Splitting with Dynamic Imports
+
+JavaScript is expensive — not just to download, but to parse and execute. Every byte of JS you send delays interactivity.
+
+Next.js automatically splits your code by route (each page gets its own bundle), but you can go further with dynamic imports to defer loading of heavy components.
+
+```typescript
+import dynamic from 'next/dynamic'
+
+// Heavy chart library — only load it when needed
+const AnalyticsChart = dynamic(
+  () => import('@/components/AnalyticsChart'),
+  {
+    loading: () => <div className="h-64 bg-muted animate-pulse rounded-xl" />,
+    ssr: false, // skip server render for client-only libraries
+  }
+)
+
+// Component that uses it — AnalyticsChart bundle only loads on this page
+export function StatsPage() {
+  return (
+    <div>
+      <h1>Analytics</h1>
+      <AnalyticsChart />
+    </div>
+  )
+}
+```
+
+The `loading` prop provides a skeleton placeholder while the component loads, preventing layout shifts and giving users immediate visual feedback.
+
+## 3. Maximize Server Components
+
+React Server Components (RSC), now the default in Next.js App Router, are one of the biggest performance improvements available. Server Components:
+
+- Run on the server — zero JavaScript shipped to the client
+- Can access databases, file systems, and server APIs directly
+- Reduce bundle size significantly
+
+The rule of thumb: everything should be a Server Component unless it requires interactivity (`onClick`, `useState`, browser APIs). Push `'use client'` as far down the component tree as possible.
+
+```typescript
+// Server Component (default) — runs on server, no client JS
+async function ArticleList() {
+  // Direct filesystem access — no API route needed
+  const articles = getArticleEntries() // runs on server
+  
+  return (
+    <div>
+      {articles.map((article) => (
+        // ArticleCard is also a Server Component
+        <ArticleCard key={article.slug} entry={article} />
+      ))}
+    </div>
+  )
+}
+
+// Client Component — only for interactivity
+'use client'
+function LikeButton({ articleSlug }: { articleSlug: string }) {
+  const [liked, setLiked] = useState(false)
+  return (
+    <button onClick={() => setLiked(!liked)}>
+      {liked ? 'Liked!' : 'Like'}
+    </button>
+  )
+}
+```
+
+Keeping most of your UI in Server Components dramatically reduces the amount of JavaScript your users download.
+
+## 4. Edge Rendering for Dynamic Content
+
+Not everything can be statically generated. For pages that need to be dynamic — personalized content, real-time data — **Edge Runtime** is the fastest option.
+
+Edge functions run in data centers geographically close to your users, reducing latency to milliseconds:
+
+```typescript
+// app/api/trending/route.ts
+export const runtime = 'edge' // run at the edge, close to users
+
+export async function GET() {
+  const data = await fetchTrendingArticles()
+  return Response.json(data, {
+    headers: {
+      'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300',
+    },
+  })
+}
+```
+
+The `stale-while-revalidate` cache header is particularly powerful: serve the cached version immediately while fetching a fresh one in the background. Users get instant responses, and data stays relatively fresh.
+
+## 5. Incremental Static Regeneration (ISR)
+
+For content sites like AquaClaw, ISR is the sweet spot between static (fast, but stale) and dynamic (fresh, but slow):
+
+```typescript
+// app/[lang]/articles/page.tsx
+export const revalidate = 3600 // regenerate at most every hour
+
+export default async function ArticlesPage() {
+  const articles = getArticleEntries() // reads from filesystem at build time
+  return <ArticleList articles={articles} />
+}
+```
+
+With ISR:
+- First visitor after deployment gets a freshly built page (fast)
+- Subsequent visitors get the cached version (extremely fast)
+- After `revalidate` seconds, Next.js regenerates the page in the background
+- No visitor ever waits for a page build
+
+When AquaClaw publishes a new article, a webhook triggers a revalidation, and the articles page is rebuilt within seconds — with no downtime or full site rebuild.
+
+## 6. Font Optimization
+
+Custom fonts can cause **FOUT** (Flash of Unstyled Text) and add significant load time. Next.js has a built-in solution:
+
+```typescript
+// app/layout.tsx
+import { Geist, Geist_Mono } from 'next/font/google'
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+  // Only load weights you actually use
+  weight: ['400', '700'],
+})
+```
+
+`next/font` automatically:
+- Self-hosts the font (no external request to Google)
+- Generates `font-display: swap` for zero FOUT
+- Inlines the `@font-face` declaration in CSS to avoid a render-blocking stylesheet
+
+## 7. Measure Everything
+
+You can't optimize what you don't measure. Use these tools to identify bottlenecks:
+
+- **Lighthouse** (built into Chrome DevTools) — measures Core Web Vitals: LCP, CLS, INP
+- **Next.js Speed Insights** — real user monitoring integrated with Vercel
+- **Bundle Analyzer** — visualize what's in your JavaScript bundle
+
+```bash
+# Analyze your Next.js bundle
+ANALYZE=true next build
+```
+
+The golden rule: optimize the actual bottleneck. Profiling often reveals that the bottleneck is not where you expected — unoptimized images and unused JavaScript are usually the culprits, not your component structure.
+
+## Summary
+
+The biggest wins for most Next.js sites in 2026:
+
+1. Use `next/image` for all images — automatic WebP, lazy loading, proper sizing
+2. Push `'use client'` as far down the tree as possible — maximize Server Components
+3. Dynamic import heavy libraries that aren't needed on initial load
+4. Use ISR for content pages — fast delivery with automatic freshness
+5. Self-host fonts with `next/font` — eliminate render-blocking external font requests
+
+Each of these is a drop-in improvement with minimal code changes and measurable impact on Core Web Vitals.
