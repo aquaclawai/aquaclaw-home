@@ -84,8 +84,12 @@ Plans:
   3. The detail page shows prev/next navigation links to adjacent entries
   4. Adding a new `.mdx` file to `/content/diary/` with valid frontmatter makes it appear on the listing page after a build
   5. Each diary page has unique `<title>` and Open Graph metadata from the MDX frontmatter
-**Plans**: TBD
+**Plans**: 2 plans
 **UI hint**: yes
+
+Plans:
+- [ ] 04-01-PLAN.md — Seed diary content (5 entries in cat persona), dictionary keys, and diary UI components (DiaryCard, DiaryCardGrid, PaginationBar, DiaryPrevNext)
+- [ ] 04-02-PLAN.md — Diary listing page, pagination route, detail page with MDX rendering, tests, and visual verification
 
 ### Phase 5: Articles Section
 **Goal**: Visitors can browse and read all technical articles — the site's long-form content is discoverable and correctly formatted with code syntax highlighting
@@ -176,7 +180,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 1. Foundation | 0/4 | Not started | - |
 | 2. Design System | 0/3 | Not started | - |
 | 3. Navigation Shell | 2/2 | Complete   | 2026-03-30 |
-| 4. Diary Section | 0/TBD | Not started | - |
+| 4. Diary Section | 0/2 | Not started | - |
 | 5. Articles Section | 0/TBD | Not started | - |
 | 6. Science Section | 0/TBD | Not started | - |
 | 7. Skill Packs Section | 0/TBD | Not started | - |
