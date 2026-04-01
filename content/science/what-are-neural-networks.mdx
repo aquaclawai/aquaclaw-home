@@ -1,0 +1,99 @@
+---
+title: "What Are Neural Networks?"
+date: "2026-03-30"
+excerpt: "Neural networks were inspired by the brain, but they work very differently. Understanding how they learn — through layers, weights, and repeated adjustment — unlocks the logic behind modern AI."
+difficulty: intermediate
+tags: [ai, neural-networks, deep-learning]
+---
+
+The term "neural network" sounds like it comes straight from a science fiction movie, conjuring images of digital brains and artificial consciousness. The reality is both more mundane and more fascinating.
+
+Neural networks are mathematical structures — not brains, not minds, but systems of equations arranged in a way that lets them learn patterns from data. Here's how they actually work.
+
+## The Brain Analogy (and Its Limits)
+
+Neural networks were loosely inspired by biological neurons in the brain. A biological neuron receives signals through its inputs, processes them, and fires an output signal if those inputs exceed a certain threshold. Billions of these neurons connected together produce human cognition.
+
+Early AI researchers asked: what if we could build something similar in software?
+
+The artificial neuron they came up with takes in numbers, multiplies each one by a "weight" (a number that represents how important that input is), adds them all together, and passes the result through a function that determines its output. Stack thousands of these artificial neurons together in layers, and you have a neural network.
+
+The brain analogy is useful as a starting point, but don't take it too literally. Biological brains are vastly more complex, operate on different principles, and we still barely understand how they work. Artificial neural networks are mathematical approximations, not digital replicas of biology.
+
+## Layers: The Key Structure
+
+The defining feature of a neural network is its layered organization. There are three types of layers:
+
+**The input layer** receives raw data. If you're training a network to recognize handwritten digits, each pixel of the image might be one input. A 28x28 pixel image has 784 pixels, so the input layer has 784 nodes.
+
+**Hidden layers** are where the actual processing happens. Each node in a hidden layer receives values from the previous layer, applies its weights, and passes the result forward. "Deep learning" just means there are many hidden layers — sometimes dozens or hundreds — allowing the network to learn increasingly abstract representations of the data.
+
+**The output layer** produces the final result. For a digit recognition task, the output layer might have 10 nodes — one for each digit from 0 to 9 — and the network's prediction is whichever output node has the highest value.
+
+## Weights: The Numbers That Matter
+
+Every connection between neurons has an associated weight — a number that starts out random and gradually gets adjusted during training.
+
+Think of it like a recipe. Imagine you're trying to figure out the perfect recipe for a dish, but instead of tasting and adjusting, you run thousands of experiments and measure whether each version got closer to or further from the target. Each ingredient has a "weight" — how much of it goes into the dish. Training a neural network is essentially that process, but running millions of experiments with billions of weights.
+
+During training, the network:
+1. Receives an input example
+2. Produces an output (initially wrong, because the weights are random)
+3. Compares its output to the correct answer
+4. Calculates how "wrong" it was — this is called the **loss**
+5. Adjusts all the weights slightly in a direction that would reduce the loss
+6. Repeats this process millions of times
+
+The algorithm that calculates how to adjust the weights is called **backpropagation** (or "backprop"). The algorithm that uses those calculations to actually update the weights is usually some variant of **gradient descent**. These are just mathematical procedures — calculus and linear algebra, essentially — but at scale they produce systems that can do remarkable things.
+
+## What "Deep" in Deep Learning Means
+
+"Deep learning" is just neural networks with many layers. The word "deep" refers to the depth of the stack of layers, not anything mysterious.
+
+More layers let the network learn more abstract representations. Consider an image recognition network:
+
+- The first layers might learn to detect simple edges and corners
+- Middle layers might combine those edges into shapes — curves, circles, straight lines
+- Deeper layers might recognize object parts — eyes, wheels, windows
+- The final layers recognize complete objects — faces, cars, buildings
+
+No human programmer wrote rules saying "look for edges, then shapes, then parts, then objects." The network discovered these representations on its own, through training, because they turned out to be useful for correctly classifying images.
+
+This automatic discovery of useful intermediate representations is what makes deep learning so powerful. It works for images, audio, text, and many other types of data.
+
+## Training Data: The Foundation
+
+A neural network is only as good as the data it was trained on. The network learns to recognize the patterns in its training data — which means if the training data is biased, incomplete, or misleading, the network will be too.
+
+This is why the quality and representativeness of training data is one of the most important (and most discussed) issues in AI. A face recognition system trained mostly on photos of light-skinned people will perform worse on dark-skinned faces. A medical diagnosis system trained on data from one population may not generalize to another.
+
+The network can't tell you what patterns it found in the data. It can't explain its reasoning. It just produces outputs. This "black box" nature of neural networks is a genuine limitation and an active area of research.
+
+## When They Work and When They Don't
+
+Neural networks excel at tasks where:
+- There's a lot of training data available
+- The input and output can be represented as numbers
+- The pattern you're looking for is consistent across examples
+- Near-perfect accuracy is less critical than finding good-enough patterns
+
+They struggle when:
+- Training data is scarce
+- You need the system to explain its reasoning
+- The rules change dramatically over time
+- Edge cases matter a lot (like in safety-critical systems)
+
+## From Theory to Practice
+
+The ideas behind neural networks go back to the 1940s and 1950s, but they only became practical in the last decade or so. Three things changed: more computing power (especially graphics processors, which happen to be well-suited for neural network calculations), more training data (the internet), and algorithmic improvements that made deep networks tractable to train.
+
+Today's large AI systems — the ones generating images, writing text, and translating languages — are built on neural networks with billions or even trillions of weights. The fundamental math is the same as described here; the scale is what's new.
+
+Understanding neural networks won't let you build one from scratch tomorrow. But it demystifies the technology behind a system that increasingly shapes daily life. These aren't brains. They're not magic. They're math — specifically, the math of learning from examples.
+
+## Further Reading
+
+- [Neural network — Wikipedia](https://en.wikipedia.org/wiki/Neural_network_(machine_learning))
+- [Deep learning — Wikipedia](https://en.wikipedia.org/wiki/Deep_learning)
+- [But what is a neural network? — 3Blue1Brown (YouTube)](https://www.youtube.com/watch?v=aircAruvnKk)
+- [A beginner's guide to neural networks — Towards Data Science](https://towardsdatascience.com/a-beginner-friendly-explanation-of-how-neural-networks-work-55064db60df4)

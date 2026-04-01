@@ -1,0 +1,103 @@
+---
+title: "Understanding Machine Learning"
+date: "2026-03-31"
+excerpt: "Machine learning is how AI systems get smarter — by finding patterns in examples rather than following hand-written rules. Here's a clear look at how it works and the different forms it takes."
+difficulty: intermediate
+tags: [ai, machine-learning, data]
+---
+
+Software has traditionally worked by following instructions. A programmer writes explicit rules — "if the user clicks this button, do that thing" — and the software executes those rules faithfully.
+
+Machine learning is different. Instead of following hand-written rules, a machine learning system learns the rules itself by looking at examples. Feed it enough data, and it figures out the patterns on its own.
+
+This shift — from programming rules to learning from data — is the core idea behind most modern AI.
+
+## Learning From Examples
+
+The analogy of a child learning to read works well here. Parents don't teach their children English by handing them a grammar book and making them memorize every rule. They read to them, speak to them, correct them, and over time the child absorbs the patterns of the language through exposure.
+
+Machine learning systems learn similarly. Instead of being given a rulebook, they're given examples: thousands or millions of labeled data points. A spam filter isn't built by writing rules that say "emails with 'FREE MONEY' in the subject are spam." It's trained on millions of emails already labeled as spam or not-spam, and it learns what distinguishes the two categories by finding patterns in those examples.
+
+The result is a system that can handle new cases it's never seen before — because it has internalized the underlying pattern, not just memorized the specific examples.
+
+## The Three Main Types
+
+Machine learning comes in several flavors, each suited to different problems.
+
+### Supervised Learning
+
+In supervised learning, you train the model using labeled data — examples where you already know the correct answer.
+
+Think of it like a student doing practice problems with an answer key. The student attempts each problem, checks their answer against the key, and adjusts their approach when they get something wrong. Over thousands of practice problems, they get better.
+
+In supervised learning, the "answer key" comes in the form of labeled training data. If you're training a model to identify photos of cats, you give it a large collection of photos where each one is labeled "cat" or "not cat." The model makes predictions, compares them to the correct labels, and adjusts its internal parameters to do better next time.
+
+Supervised learning is used for:
+- **Classification** — sorting inputs into categories (spam/not-spam, cat/dog, fraud/legitimate)
+- **Regression** — predicting a number (house price, temperature, stock value)
+
+It's the most widely used form of machine learning and underlies most of the AI you interact with daily: recommendation systems, voice recognition, image tagging, medical diagnosis tools.
+
+### Unsupervised Learning
+
+Unsupervised learning works without labeled data. Instead of learning "this photo is a cat," the model looks at unlabeled data and finds patterns on its own.
+
+Think of it like sorting a pile of unknown foreign coins. You don't know what country each coin is from, but you can group similar-looking coins together based on their appearance — color, size, markings. You're finding structure in the data without being told what to look for.
+
+Unsupervised techniques are used for:
+- **Clustering** — grouping similar items together (customer segments, document topics)
+- **Dimensionality reduction** — simplifying complex data while preserving its essential structure
+- **Anomaly detection** — identifying unusual patterns that don't fit the norm
+
+Unsupervised learning is less flashy than supervised learning because you can't easily measure "correct" predictions. But it's enormously useful for exploring data, finding hidden structure, and preparing data for other analyses.
+
+### Reinforcement Learning
+
+Reinforcement learning works differently from both of the above. Instead of learning from labeled data, an agent learns by interacting with an environment and receiving feedback in the form of rewards and penalties.
+
+Think of training a dog. You don't explain to the dog in words what you want it to do. You give it a treat when it does the right thing and withhold treats (or say "no") when it doesn't. Over time, the dog learns to repeat behaviors that led to treats and avoid behaviors that didn't.
+
+Reinforcement learning agents work the same way. The agent takes actions in an environment, receives rewards or penalties based on the outcomes, and gradually learns a policy — a strategy for which actions to take in which situations — that maximizes its cumulative reward.
+
+This is how AI systems learned to play games at superhuman levels: they played millions of games against themselves, with winning as the reward signal. It's also used in robotics, autonomous driving, and training language models to follow instructions.
+
+## What Is "Training Data"?
+
+All three types of machine learning depend on data. "Training data" is the collection of examples the model learns from.
+
+The quality and quantity of training data has an enormous effect on the final model's performance. More data generally means a better model — up to a point. But "more data" isn't magic: if the data is biased, mislabeled, or unrepresentative of real-world conditions, the model will learn to reproduce those flaws.
+
+A facial recognition system trained primarily on photos of people from one demographic will be less accurate on other demographics. A loan approval model trained on historical data that reflects past discrimination will learn to replicate that discrimination. These aren't hypothetical concerns — they've all happened in real deployed systems.
+
+## Overfitting: Memorizing vs. Learning
+
+One of the most common problems in machine learning is called **overfitting**. This happens when a model learns the training data too well — it memorizes the specific examples rather than learning the underlying pattern.
+
+An overfitted model performs well on training data and poorly on new data it hasn't seen before. It's like a student who memorizes the answers to practice exam questions without understanding the underlying concepts. They ace the practice test but struggle on the real exam.
+
+The fix involves techniques like using a separate "test set" of data (held back from training, used only to evaluate final performance), and methods that prevent the model from becoming too specialized to its training examples.
+
+## The Relationship to AI and Deep Learning
+
+Machine learning is a subset of AI. Not all AI is machine learning — early AI used hand-written rules extensively — but most modern AI is built on machine learning.
+
+Deep learning is a subset of machine learning, specifically machine learning that uses neural networks with many layers. When you hear about breakthroughs in image recognition, natural language processing, or generative AI, those are almost always deep learning systems.
+
+The hierarchy: AI → Machine Learning → Deep Learning. Deep learning is the most powerful and most computationally expensive form; simpler machine learning methods are still widely used for problems where deep learning would be overkill.
+
+## Why This Matters
+
+Understanding machine learning helps you think clearly about the AI systems you encounter:
+
+- When an AI gives you a biased recommendation or a discriminatory outcome, it's often because the training data reflected those biases
+- When an AI seems to perform well in demos but poorly in production, it may have overfit to conditions in the training data that don't match the real world
+- When you ask an AI to do something genuinely new — a type of task it wasn't trained on — it's likely to struggle
+
+The magic of modern AI is real. The limitations are equally real. Machine learning is a powerful tool for finding patterns in data; it is not a general-purpose intelligence that can do anything a human can do.
+
+## Further Reading
+
+- [Machine learning — Wikipedia](https://en.wikipedia.org/wiki/Machine_learning)
+- [Supervised vs. unsupervised learning — IBM](https://www.ibm.com/think/topics/supervised-vs-unsupervised-learning)
+- [Reinforcement learning — DeepMind](https://www.deepmind.com/learning-resources/introduction-to-reinforcement-learning-with-david-silver)
+- [A visual introduction to machine learning — R2D3](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)

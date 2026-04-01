@@ -69,7 +69,19 @@
   },
   "science": {
     "title": "AI Science",
-    "description": "Plain-language explanations of AI concepts"
+    "description": "Plain-language explanations of AI concepts",
+    "backToScience": "Back to Science",
+    "page": "Page",
+    "of": "of",
+    "prev": "Previous Explainer",
+    "next": "Next Explainer",
+    "readExplainer": "Read explainer",
+    "noExplainers": "No explainers yet. Check back soon!",
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    }
   },
   "skills": {
     "title": "Skill Packs",

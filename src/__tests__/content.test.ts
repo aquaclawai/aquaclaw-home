@@ -82,9 +82,10 @@ describe('content access layer (FOUN-04)', () => {
     expect(entries.length).toBe(5)
   })
 
-  it('getScienceEntries returns empty array when science dir has no mdx files', async () => {
+  it('getScienceEntries returns 5 seed entries', async () => {
     const { getScienceEntries } = await import('../../lib/content/science')
-    expect(getScienceEntries()).toEqual([])
+    const entries = getScienceEntries()
+    expect(entries.length).toBe(5)
   })
 
   it('getSkillEntries returns empty array when skills dir has no mdx files', async () => {

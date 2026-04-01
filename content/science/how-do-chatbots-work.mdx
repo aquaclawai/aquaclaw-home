@@ -1,0 +1,89 @@
+---
+title: "How Do Chatbots Work?"
+date: "2026-03-29"
+excerpt: "When you type a message to an AI chatbot, what actually happens? The answer is more interesting — and more surprising — than most people expect."
+difficulty: beginner
+tags: [ai, chatbots, nlp]
+---
+
+Type a message. Hit send. A reply appears within seconds that sounds completely natural.
+
+What just happened inside the machine?
+
+## Two Very Different Kinds of Chatbots
+
+Not all chatbots are the same. There are two fundamentally different types, and understanding the difference helps explain why some feel robotic and others feel almost human.
+
+**Rule-based chatbots** are the older, simpler kind. They work by matching your input against a list of pre-written rules and responding with a pre-written response. When you click "Track my order" on a customer service chat, you're usually talking to this kind of bot. It's essentially a fancy decision tree. It doesn't understand language — it just matches keywords and patterns you type to responses a human wrote in advance.
+
+Rule-based chatbots are reliable and predictable. They also break the moment you do something unexpected. Ask a rule-based customer service bot something even slightly outside its script, and it'll either apologize awkwardly or loop you back to the main menu.
+
+**AI-powered chatbots** are different. Instead of following hand-written rules, they've been trained on enormous amounts of text — books, websites, conversations, articles — and learned to predict what words naturally follow other words in context. When you type a message, the chatbot doesn't look up a pre-written response; it generates a response from scratch, word by word, based on everything it learned during training.
+
+This is why modern AI chatbots can handle questions they've never been asked before and can sustain a back-and-forth conversation that actually tracks what was said earlier.
+
+## The Core Idea: Predicting the Next Word
+
+Modern AI chatbots are built on a type of model called a **large language model** (LLM). The name sounds technical, but the concept is elegant.
+
+An LLM is trained on an enormous amount of text, and during training it learns to predict: given all the text that came before, what word is most likely to come next?
+
+If the conversation so far is "The sky is..." the model has learned from billions of examples that common completions include "blue," "clear," "overcast," and similar words. It picks from these likely options, adds that word, then predicts the next word given everything up to that point, then the next word, and so on — until it's produced a complete response.
+
+This process, repeated thousands of times in under a second, generates text that reads like a human wrote it. Not because the AI "understands" the conversation the way a person does, but because it has learned the statistical patterns of how language works at a massive scale.
+
+## Understanding Your Message
+
+Before the chatbot generates a response, it needs to understand what you actually asked. This is where **natural language processing** (NLP) comes in.
+
+NLP is the field of AI focused on working with human language. It involves breaking down your message into its component parts, recognizing what words mean in context, and interpreting the intent behind your question.
+
+For example, the word "bank" means something completely different in "I need to visit the bank" versus "the bank of the river." A simple system that treats words as just strings of letters would get confused. NLP systems handle this ambiguity by looking at the full context of a sentence rather than individual words in isolation.
+
+Modern LLMs have NLP built in — they handle context naturally because they were trained to predict language in context from the start.
+
+## Memory and Context
+
+One important thing to understand about most AI chatbots: they don't have persistent memory the way you do.
+
+Each time a chatbot responds, it typically looks at the entire conversation up to that point — your original message and every reply since — and uses all of that as context for generating the next response. This is why they can remember what you said earlier in the conversation.
+
+But close the chat and start a new one, and most chatbots start completely fresh. The previous conversation is gone from their perspective. They haven't "learned" from talking to you — they're still the same model they were before.
+
+This is why, if you ask a chatbot something in conversation A and then ask the same thing in conversation B, it will have no idea what you discussed in A. The memory lives in the conversation window, not in the model.
+
+## What Chatbots Are Good At
+
+AI chatbots excel at certain tasks:
+
+- **Answering factual questions** they were trained on
+- **Explaining concepts** at the level of detail you ask for
+- **Drafting text** — emails, summaries, first drafts
+- **Brainstorming** ideas or variations
+- **Translating** between languages
+- **Carrying on natural conversation** on a huge range of topics
+
+## What They Get Wrong
+
+Chatbots also have consistent weaknesses worth knowing about:
+
+- **They can be confidently wrong.** Chatbots sometimes state incorrect information with the same tone and confidence as correct information. This is called "hallucination" — they generate text that sounds plausible but isn't accurate.
+
+- **They don't know what they don't know.** A human expert will often say "I'm not sure about this one." Chatbots are less reliable about flagging their own uncertainty.
+
+- **They don't learn from your conversation.** Telling a chatbot it got something wrong doesn't update the underlying model. It might correct itself in the current conversation, but the same model will make the same mistake for the next person.
+
+- **Their knowledge has a cutoff.** Most chatbots are trained on data up to a certain date. They won't know about events that happened after that date unless they've been given tools to look things up in real time.
+
+## The Bigger Picture
+
+Chatbots feel almost magical, but they're also deeply mechanical. The magic is in the scale — trained on more text than any human could read in a thousand lifetimes, generating responses faster than you can blink.
+
+Understanding how they work doesn't make them less useful. If anything, knowing that they're sophisticated pattern-matching systems — not all-knowing oracles — helps you use them more effectively. Ask clear questions, verify important facts independently, and remember that confidence in a response doesn't equal correctness.
+
+## Further Reading
+
+- [Large language model — Wikipedia](https://en.wikipedia.org/wiki/Large_language_model)
+- [How ChatGPT works — MIT Technology Review](https://www.technologyreview.com/2023/03/03/1069311/inside-story-oral-history-chatgpt-sam-altman-openai/)
+- [Natural language processing — IBM](https://www.ibm.com/topics/natural-language-processing)
+- [What is an LLM? — Cloudflare](https://www.cloudflare.com/learning/ai/what-is-large-language-model/)
