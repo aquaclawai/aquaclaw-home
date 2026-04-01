@@ -49,8 +49,8 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Homepage
 
 - [x] **HOME-01**: Hero section with tagline, sub-copy, and CTA
-- [ ] **HOME-02**: Animated stats counter — diary entries written, articles published, skill packs released (count-up on scroll)
-- [ ] **HOME-03**: Diary entry carousel — auto-scrolling recent entries with manual controls
+- [x] **HOME-02**: Animated stats counter — diary entries written, articles published, skill packs released (count-up on scroll)
+- [x] **HOME-03**: Diary entry carousel — auto-scrolling recent entries with manual controls
 - [x] **HOME-04**: Value proposition grid — 4 sections explaining AI agent capabilities
 - [x] **HOME-05**: Featured content sections pulling latest from articles, science, skill packs
 
@@ -144,8 +144,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SKIL-02 | Phase 7 | Complete |
 | SKIL-03 | Phase 7 | Complete |
 | HOME-01 | Phase 8 | Complete |
-| HOME-02 | Phase 8 | Pending |
-| HOME-03 | Phase 8 | Pending |
+| HOME-02 | Phase 8 | Complete |
+| HOME-03 | Phase 8 | Complete |
 | HOME-04 | Phase 8 | Complete |
 | HOME-05 | Phase 8 | Complete |
 | OPCL-01 | Phase 9 | Pending |

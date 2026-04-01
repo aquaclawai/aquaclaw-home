@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 08-01-PLAN.md
-last_updated: "2026-04-01T16:22:19.768Z"
+stopped_at: Completed 08-02-PLAN.md
+last_updated: "2026-04-01T16:32:51.454Z"
 last_activity: 2026-04-01
 progress:
   total_phases: 11
-  completed_phases: 7
+  completed_phases: 8
   total_plans: 19
-  completed_plans: 18
+  completed_plans: 19
   percent: 100
 ---
 
@@ -69,6 +69,7 @@ Progress: [██████████] 100%
 | Phase 07-skill-packs-section P02 | 525686min | 2 tasks | 3 files |
 | Phase 07-skill-packs-section P02 | 12min | 2 tasks | 3 files |
 | Phase 08-homepage P01 | 7 | 2 tasks | 5 files |
+| Phase 08-homepage P02 | 8min | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -122,6 +123,8 @@ Recent decisions affecting current work:
 - [Phase 08-homepage]: HeroSection uses typeof import for dict prop type — avoids manual interface duplication and stays in sync with JSON
 - [Phase 08-homepage]: FeaturedContent receives full dict (typeof en) to thread dict.science.difficulty to ScienceCard — parent slices arrays to 3 entries before passing
 - [Phase 08-homepage]: ValuePropGrid accepts narrow dict prop shape (not full dict) to keep component self-contained and reusable
+- [Phase 08-homepage]: import type used for DiaryEntry in DiaryCarousel — prevents server-only guard triggering in client bundle
+- [Phase 08-homepage]: Homepage page.tsx fetches all 4 content types server-side once and passes serialized slices to client islands
 
 ### Pending Todos
 
@@ -135,6 +138,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-01T16:22:19.766Z
-Stopped at: Completed 08-01-PLAN.md
+Last session: 2026-04-01T16:32:51.452Z
+Stopped at: Completed 08-02-PLAN.md
 Resume file: None
