@@ -32,7 +32,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **ARTC-01**: Articles listing page with card grid — thumbnail, title, date, excerpt
 - [ ] **ARTC-02**: Individual article detail page with full content, date, prev/next navigation
-- [ ] **ARTC-03**: Articles stored as MDX files with structured frontmatter
+- [x] **ARTC-03**: Articles stored as MDX files with structured frontmatter
 
 ### Science
 
@@ -136,7 +136,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DIAR-03 | Phase 4 | Complete |
 | ARTC-01 | Phase 5 | Pending |
 | ARTC-02 | Phase 5 | Pending |
-| ARTC-03 | Phase 5 | Pending |
+| ARTC-03 | Phase 5 | Complete |
 | SCIE-01 | Phase 6 | Pending |
 | SCIE-02 | Phase 6 | Pending |
 | SCIE-03 | Phase 6 | Pending |

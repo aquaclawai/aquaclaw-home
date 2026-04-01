@@ -185,7 +185,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 2. Design System | 0/3 | Not started | - |
 | 3. Navigation Shell | 2/2 | Complete   | 2026-03-30 |
 | 4. Diary Section | 2/2 | Complete   | 2026-04-01 |
-| 5. Articles Section | 0/2 | Not started | - |
+| 5. Articles Section | 1/2 | In Progress|  |
 | 6. Science Section | 0/TBD | Not started | - |
 | 7. Skill Packs Section | 0/TBD | Not started | - |
 | 8. Homepage | 0/TBD | Not started | - |

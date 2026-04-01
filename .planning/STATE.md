@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 5 context gathered
-last_updated: "2026-04-01T10:10:40.396Z"
+stopped_at: Completed 05-articles-section-01-PLAN.md
+last_updated: "2026-04-01T10:26:45.412Z"
 last_activity: 2026-03-30
 progress:
   total_phases: 11
   completed_phases: 4
-  total_plans: 11
-  completed_plans: 11
+  total_plans: 13
+  completed_plans: 12
   percent: 0
 ---
 
@@ -61,6 +61,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-design-system P03 | 15min | 2 tasks | 1 files |
 | Phase 04-diary-section P01 | 4min | 2 tasks | 10 files |
 | Phase 04-diary-section P02 | 5min | 2 tasks | 4 files |
+| Phase 05-articles-section P01 | 12min | 2 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -94,6 +95,9 @@ Recent decisions affecting current work:
 - [Phase 04-diary-section]: Dynamic MDX import uses relative path from app route to project-root content/ — @/ alias maps to src/ so cannot reference content/
 - [Phase 04-diary-section]: Pagination page=1 redirects to /diary base route to prevent duplicate content for SEO
 - [Phase 04-diary-section]: Prev/next: newest-first array means prevEntry (older) is at higher index, nextEntry (newer) at lower index
+- [Phase 05-articles-section]: Slug char-code hash (sum charCodeAt mod N) used for deterministic mascot pose on articles — replaces dayNumber-based determinism from diary pattern
+- [Phase 05-articles-section]: ArticlePrevNext dict omits 'day' key entirely — cleaner type constraint vs DiaryPrevNext which requires day prefix for episode numbers
+- [Phase 05-articles-section]: ArticleCardGrid is a separate component from DiaryCardGrid to keep content sections decoupled for future independent divergence
 
 ### Pending Todos
 
@@ -107,6 +111,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-01T10:10:40.393Z
-Stopped at: Phase 5 context gathered
-Resume file: .planning/phases/05-articles-section/05-CONTEXT.md
+Last session: 2026-04-01T10:26:45.410Z
+Stopped at: Completed 05-articles-section-01-PLAN.md
+Resume file: None
