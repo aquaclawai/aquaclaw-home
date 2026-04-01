@@ -88,8 +88,8 @@ Plans:
 **UI hint**: yes
 
 Plans:
-- [ ] 04-01-PLAN.md — Seed diary content (5 entries in cat persona), dictionary keys, and diary UI components (DiaryCard, DiaryCardGrid, PaginationBar, DiaryPrevNext)
-- [ ] 04-02-PLAN.md — Diary listing page, pagination route, detail page with MDX rendering, tests, and visual verification
+- [x] 04-01-PLAN.md — Seed diary content (5 entries in cat persona), dictionary keys, and diary UI components (DiaryCard, DiaryCardGrid, PaginationBar, DiaryPrevNext)
+- [x] 04-02-PLAN.md — Diary listing page, pagination route, detail page with MDX rendering, tests, and visual verification
 
 ### Phase 5: Articles Section
 **Goal**: Visitors can browse and read all technical articles — the site's long-form content is discoverable and correctly formatted with code syntax highlighting
@@ -100,8 +100,12 @@ Plans:
   2. Clicking an article card navigates to the full article at `/en/articles/[slug]` with MDX content rendered and code blocks syntax-highlighted
   3. The detail page shows prev/next navigation links to adjacent articles
   4. Adding a new `.mdx` file to `/content/articles/` with valid frontmatter makes it appear on the listing page after a build
-**Plans**: TBD
+**Plans**: 2 plans
 **UI hint**: yes
+
+Plans:
+- [ ] 05-01-PLAN.md — Seed article content (5 technical articles), dictionary keys, and article UI components (ArticleCard, ArticleCardGrid, ArticlePrevNext)
+- [ ] 05-02-PLAN.md — Articles listing page, pagination route, detail page with MDX rendering + syntax highlighting, tests, and visual verification
 
 ### Phase 6: Science Section
 **Goal**: Visitors can browse and read all science/education explainers — AI concepts are presented accessibly with illustrations and related links
@@ -181,7 +185,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 2. Design System | 0/3 | Not started | - |
 | 3. Navigation Shell | 2/2 | Complete   | 2026-03-30 |
 | 4. Diary Section | 2/2 | Complete   | 2026-04-01 |
-| 5. Articles Section | 0/TBD | Not started | - |
+| 5. Articles Section | 0/2 | Not started | - |
 | 6. Science Section | 0/TBD | Not started | - |
 | 7. Skill Packs Section | 0/TBD | Not started | - |
 | 8. Homepage | 0/TBD | Not started | - |
