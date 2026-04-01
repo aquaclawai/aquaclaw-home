@@ -44,7 +44,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **SKIL-01**: Skill Packs listing page with browsable grid — filter by category/tag
 - [ ] **SKIL-02**: Individual skill pack detail page with description, feature list, download CTA
-- [ ] **SKIL-03**: Skill pack data stored as MDX/JSON with structured metadata (name, category, tags, description)
+- [x] **SKIL-03**: Skill pack data stored as MDX/JSON with structured metadata (name, category, tags, description)
 
 ### Homepage
 
@@ -142,7 +142,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SCIE-03 | Phase 6 | Complete |
 | SKIL-01 | Phase 7 | Pending |
 | SKIL-02 | Phase 7 | Pending |
-| SKIL-03 | Phase 7 | Pending |
+| SKIL-03 | Phase 7 | Complete |
 | HOME-01 | Phase 8 | Pending |
 | HOME-02 | Phase 8 | Pending |
 | HOME-03 | Phase 8 | Pending |
