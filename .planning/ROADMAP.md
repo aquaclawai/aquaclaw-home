@@ -148,8 +148,12 @@ Plans:
   3. The diary carousel auto-scrolls through recent entries and responds to manual prev/next controls
   4. A value proposition grid with 4 sections is visible, explaining AI agent capabilities in plain language
   5. Featured content sections show the latest articles, science explainers, and skill packs with links to their respective listing pages
-**Plans**: TBD
+**Plans**: 2 plans
 **UI hint**: yes
+
+Plans:
+- [ ] 08-01-PLAN.md — Dictionary keys, homepage test scaffold, and server components (HeroSection, ValuePropGrid, FeaturedContent)
+- [ ] 08-02-PLAN.md — Client islands (StatsCounter, DiaryCarousel), page orchestrator wiring all 5 sections with SEO and ISR, visual verification
 
 ### Phase 9: OpenClaw Section
 **Goal**: Visitors interested in the AI agent technology can learn about OpenClaw/EasyClaw, download it, and follow tutorials — the tool-promotion narrative mirrors sanwan.ai's approach
@@ -196,7 +200,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 5. Articles Section | 2/2 | Complete   | 2026-04-01 |
 | 6. Science Section | 0/2 | Not started | - |
 | 7. Skill Packs Section | 1/2 | In Progress|  |
-| 8. Homepage | 0/TBD | Not started | - |
+| 8. Homepage | 0/2 | Not started | - |
 | 9. OpenClaw Section | 0/TBD | Not started | - |
 | 10. Automation & API Layer | 0/TBD | Not started | - |
 | 11. Engagement & Polish | 0/TBD | Not started | - |
