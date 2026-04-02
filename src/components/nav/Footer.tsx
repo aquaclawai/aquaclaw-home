@@ -70,7 +70,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             <ul className="space-y-1">
               <li>
                 <a
-                  href="https://github.com/aquaclaw"
+                  href="https://github.com/aquaclawai/aquarium-ce/tree/main"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-foreground/70 hover:text-primary transition-colors py-1"
