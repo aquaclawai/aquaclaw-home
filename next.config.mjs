@@ -7,6 +7,9 @@ const nextConfig = {
   images: {
     remotePatterns: [],
   },
+  outputFileTracingIncludes: {
+    '/**': ['./content/**/*'],
+  },
 }
 
 const withMDX = createMDX({
