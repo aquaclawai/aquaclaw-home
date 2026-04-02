@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { getDiaryEntries, getDiaryEntry } from '../../../../../lib/content/diary'
 import { getDictionary, type Locale } from '@/lib/i18n/getDictionary'
 import { DiaryPrevNext } from '@/components/diary/DiaryPrevNext'
+import { GiscusComments } from '@/components/engagement/GiscusComments'
 
 interface DiaryEntryPageProps {
   params: Promise<{ lang: string; slug: string }>
@@ -129,6 +130,7 @@ export default async function DiaryEntryPage({ params }: DiaryEntryPageProps) {
           day: dict.diary.day,
         }}
       />
+      <GiscusComments lang={lang} />
     </div>
   )
 }

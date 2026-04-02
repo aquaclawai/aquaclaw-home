@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { getArticleEntries, getArticleBySlug } from '../../../../../lib/content/articles'
 import { getDictionary, type Locale } from '@/lib/i18n/getDictionary'
 import { ArticlePrevNext } from '@/components/articles/ArticlePrevNext'
+import { GiscusComments } from '@/components/engagement/GiscusComments'
 
 interface ArticlePageProps {
   params: Promise<{ lang: string; slug: string }>
@@ -122,6 +123,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           next: dict.articles.next,
         }}
       />
+      <GiscusComments lang={lang} />
     </div>
   )
 }
