@@ -2,7 +2,7 @@
 
 ## What This Is
 
-AquaClaw.ai is an English-language website showcasing an autonomous AI agent that independently operates the site — creating content, managing tasks, and demonstrating AI capabilities to the general public. Modeled after sanwan.ai's structure and content approach, but with a western-style Bold & Playful UI and a pixel-art Garfield-style cat mascot. The site will eventually be operated by OpenClaw automatically.
+AquaClaw.ai is an English-language website showcasing an autonomous AI agent that independently operates the site — creating content, managing tasks, and demonstrating AI capabilities to the general public. Built with Next.js 16, Tailwind CSS v4, and a Bold & Playful design system featuring a pixel-art Garfield-style cat mascot. The site is operated by OpenClaw, which publishes content autonomously via MDX files and ISR revalidation.
 
 ## Core Value
 
@@ -12,57 +12,67 @@ Demonstrate to the general public how an autonomous AI agent can independently r
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Homepage with hero section, animated stats, diary carousel, value proposition grid, and featured content — v1.0
+- ✓ Diary/Log section — daily entries in first-person cat persona with card grid and pagination — v1.0
+- ✓ Articles section — technical guides with syntax-highlighted code blocks — v1.0
+- ✓ Science/Education section — explainers with difficulty badges and Further Reading — v1.0
+- ✓ Skill Packs section — browsable catalog with client-side category filtering and download CTAs — v1.0
+- ✓ OpenClaw/EasyClaw promotion — dedicated download section + tutorials — v1.0
+- ✓ Pixel-art light brown Garfield-style cat mascot integrated throughout the site — v1.0
+- ✓ Bold & Playful UI — warm colors, rounded shapes, bouncy animations, Fredoka/Nunito/Geist Mono fonts — v1.0
+- ✓ Fixed top navigation bar with logo, main links, and mobile hamburger menu — v1.0
+- ✓ Comprehensive footer with sitemap — v1.0
+- ✓ Giscus comment system on diary and article pages — v1.0
+- ✓ Responsive design (mobile + desktop) — v1.0
+- ✓ i18n architecture — English first with `[lang]` routing, supports adding languages — v1.0
+- ✓ SEO optimized — generateMetadata per page, sitemap, robots.txt, RSS feeds — v1.0
+- ✓ ISR revalidation webhook for OpenClaw autonomous publishing — v1.0
+- ✓ Zod schema validation for content frontmatter — v1.0
+- ✓ Lighthouse mobile ≥90 (P:95 A:100 BP:100 SEO:100) — v1.0
 
 ### Active
 
-- [ ] Homepage with hero section, stats, featured diary entries, and value proposition grid
-- [ ] Diary/Log section — daily entries documenting the AI agent's autonomous activities
-- [ ] Articles section — technical guides and content pieces
-- [ ] Science/Education section — explainers about AI capabilities
-- [ ] Skill Packs section — marketplace/browser for AI agent skill bundles
-- [ ] OpenClaw/EasyClaw promotion — dedicated download section + tutorials (mirrors sanwan.ai approach)
-- [ ] Pixel-art light brown Garfield-style cat mascot integrated throughout the site
-- [ ] Bold & Playful UI — bright colors, rounded shapes, fun animations
-- [ ] Fixed top navigation bar with logo, main links, and mobile hamburger menu
-- [ ] Comprehensive footer with sitemap
-- [ ] Comment/feedback system
-- [ ] Responsive design (mobile + desktop)
-- [ ] i18n architecture — English first, supports adding languages later
-- [ ] SEO optimized for content discoverability
+(None — v1.0 shipped, next milestone TBD)
 
 ### Out of Scope
 
-- User authentication / login system — not needed for v1, content is public
+- User authentication / login system — all content is public; auth adds GDPR obligations
 - Payment processing — skill packs are free downloads for v1
 - Real-time chat — high complexity, not core to showcase value
 - Video hosting — defer to external platforms (YouTube embeds if needed)
-- CMS admin panel — OpenClaw will manage content automatically
+- CMS admin panel — OpenClaw manages content autonomously
+- Dark mode toggle — uses `prefers-color-scheme` for automatic system-level only
+- Full-text site search — defer until content volume justifies it
 
 ## Context
 
-- **Reference site:** sanwan.ai — Chinese AI agent showcase site with hand-drawn sketch aesthetic, lobster mascot, diary entries, articles, science explainers, skill marketplace, and OpenClaw framework promotion
-- **Differentiation:** English-only, western Bold & Playful design (think Notion/Figma vibes), pixel-art cat mascot instead of sketch-style lobster
-- **Automation:** Site will be operated by OpenClaw — content creation, publishing, and management will be autonomous. The build should support this (e.g., content stored in structured formats, clear content APIs/paths)
-- **Content structure mirrors sanwan.ai:** Diary carousel on homepage, article cards, science explainer cards, skill pack browser with filtering, stats counters with animations
-- **Mascot:** Light brown Garfield-style cat in pixel art — used as floating element, favicon, branding throughout
+- **v1.0 shipped:** 2026-04-02 — 11 phases, 24 plans, 7,295 LOC (TypeScript/TSX/MDX/CSS)
+- **Tech stack:** Next.js 16 App Router, React 19, TypeScript, Tailwind CSS v4, MDX with gray-matter + Zod validation
+- **Content:** 5 diary entries, 5 articles, 5 science explainers, 5 skill packs — all in cat persona or approachable style
+- **Engagement:** Giscus comments (GitHub Discussions-backed), 3 RSS feeds (diary/articles/science)
+- **Automation:** ISR webhook at `/api/revalidate` with Bearer token auth — OpenClaw can publish by writing MDX and calling the webhook
+- **Reference site:** sanwan.ai — Chinese AI agent showcase. AquaClaw differentiates with English-only, Bold & Playful design, pixel-art cat mascot
+- **Mascot:** Light brown Garfield-style cat in pixel art — 4 poses (default, waving, thinking, sleeping), used as hero element, nav logo, placeholder thumbnails, 404 page, footer decoration
 
 ## Constraints
 
 - **Language**: English-first with i18n-ready architecture — must support future language additions without major refactoring
-- **Automation-ready**: Content structure must be compatible with OpenClaw automated operation — structured markdown/JSON content, clear content directories
-- **Performance**: Fast loading for general public audience — static generation preferred where possible
-- **SEO**: Content-heavy site targeting general public — needs strong SEO fundamentals (meta tags, structured data, sitemap)
+- **Automation-ready**: Content structure compatible with OpenClaw automated operation — structured MDX with Zod validation, clear content directories
+- **Performance**: Lighthouse mobile ≥90 — static generation with ISR for content updates
+- **SEO**: Content-heavy site targeting general public — per-page metadata, sitemap, RSS feeds
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| English-only launch with i18n architecture | Target western audience first, expand later | — Pending |
-| Bold & Playful UI style | Differentiate from sanwan.ai's sketch aesthetic, appeal to western general public | — Pending |
-| Pixel-art Garfield cat mascot | Unique branding, fits playful style, distinguishes from sanwan's lobster | — Pending |
-| Mirror sanwan.ai's OpenClaw promotion level | Proven approach — download section + tutorials | — Pending |
-| Tech stack TBD via research | Let research determine best framework for content-heavy, i18n-ready, SEO-optimized site | — Pending |
+| English-only launch with i18n architecture | Target western audience first, expand later | ✓ Good — `[lang]` routing works, only `en` dictionary needed |
+| Bold & Playful UI style | Differentiate from sanwan.ai's sketch aesthetic | ✓ Good — warm colors + Fredoka + heavy rounding is distinctive |
+| Pixel-art Garfield cat mascot | Unique branding, fits playful style | ✓ Good — 4 poses used across entire site |
+| Next.js 16 App Router + Tailwind v4 | Modern stack, ISR support, CSS-first config | ✓ Good — App Router patterns worked well |
+| MDX + filesystem content (no CMS) | OpenClaw writes files directly | ✓ Good — simple, automation-compatible |
+| Giscus for comments | Zero backend, GitHub Discussions-backed | ✓ Good — no spam management needed |
+| CSS-only animations (no motion library) | Lighter, respects prefers-reduced-motion | ✓ Good — bounce-in/float/pop cover all needs |
+| Server components by default | Client JS only where needed (carousel, filters, stats) | ✓ Good — minimal client bundle |
 
 ## Evolution
 
@@ -82,4 +92,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-30 after Phase 02 (Design System) completion — Tailwind v4 tokens, font loading, mascot assets, and design-system demo page established*
+*Last updated: 2026-04-02 after v1.0 milestone completion — all 11 phases shipped*
