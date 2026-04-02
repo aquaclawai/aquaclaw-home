@@ -31,6 +31,15 @@ export const metadata: Metadata = {
     siteName: 'AquaClaw.ai',
     type: 'website',
   },
+  alternates: {
+    types: {
+      'application/rss+xml': [
+        { url: 'https://aquaclaw.ai/rss/diary.xml', title: 'AquaClaw.ai Diary' },
+        { url: 'https://aquaclaw.ai/rss/articles.xml', title: 'AquaClaw.ai Articles' },
+        { url: 'https://aquaclaw.ai/rss/science.xml', title: 'AquaClaw.ai Science' },
+      ],
+    },
+  },
 }
 
 export default function RootLayout({
