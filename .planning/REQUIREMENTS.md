@@ -72,7 +72,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Engagement
 
 - [ ] **ENGG-01**: Giscus comment system embedded on diary and article detail pages
-- [ ] **ENGG-02**: RSS/Atom feeds — one feed per content section (diary, articles, science)
+- [x] **ENGG-02**: RSS/Atom feeds — one feed per content section (diary, articles, science)
 
 ### Automation
 
@@ -155,7 +155,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUTO-02 | Phase 10 | Complete |
 | AUTO-03 | Phase 10 | Complete |
 | ENGG-01 | Phase 11 | Pending |
-| ENGG-02 | Phase 11 | Pending |
+| ENGG-02 | Phase 11 | Complete |
 
 **Coverage:**
 - v1 requirements: 40 total
