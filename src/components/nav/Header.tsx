@@ -5,7 +5,7 @@ import MobileMenuTrigger from './MobileMenuTrigger'
 interface HeaderProps {
   lang: string
   dict: {
-    nav: { diary: string; articles: string; science: string; skills: string; openclaw: string; home: string }
+    nav: { diary: string; articles: string; science: string; skills: string; aquarium: string; aquariumCta: string; home: string }
     header: { logoAlt: string; menuOpen: string; menuClose: string }
     site: { name: string }
   }
@@ -16,7 +16,6 @@ const navLinks = [
   { key: 'articles', href: 'articles' },
   { key: 'science', href: 'science' },
   { key: 'skills', href: 'skills' },
-  { key: 'openclaw', href: 'openclaw' },
 ] as const
 
 export default function Header({ lang, dict }: HeaderProps) {
@@ -44,6 +43,14 @@ export default function Header({ lang, dict }: HeaderProps) {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href={`/${lang}/aquarium`}
+                className="ml-2 px-4 py-2 rounded-pill text-sm font-semibold font-sans bg-primary text-white hover:bg-primary/90 transition-colors"
+              >
+                {dict.nav.aquariumCta}
+              </Link>
+            </li>
           </ul>
 
           {/* Mobile menu trigger — client island */}

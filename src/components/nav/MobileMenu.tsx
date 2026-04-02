@@ -7,7 +7,7 @@ import { MascotImage } from '@/components/ui/MascotImage'
 interface MobileMenuProps {
   lang: string
   dict: {
-    nav: { diary: string; articles: string; science: string; skills: string; openclaw: string; home: string }
+    nav: { diary: string; articles: string; science: string; skills: string; aquarium: string; aquariumCta: string; home: string }
     header: { menuClose: string }
   }
   isOpen: boolean
@@ -20,7 +20,7 @@ const navLinks = [
   { key: 'articles', href: 'articles' },
   { key: 'science', href: 'science' },
   { key: 'skills', href: 'skills' },
-  { key: 'openclaw', href: 'openclaw' },
+  { key: 'aquarium', href: 'aquarium' },
 ] as const
 
 export default function MobileMenu({ lang, dict, isOpen, onClose }: MobileMenuProps) {
