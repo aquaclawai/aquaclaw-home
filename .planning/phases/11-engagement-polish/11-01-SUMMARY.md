@@ -56,11 +56,11 @@ completed: 2026-04-02
 
 ## Performance
 
-- **Duration:** 4 min
+- **Duration:** ~45 min (including user GitHub Discussions setup)
 - **Started:** 2026-04-02T02:16:35Z
-- **Completed:** 2026-04-02T02:20:38Z
-- **Tasks:** 1 of 2 (Task 2 is a human-verify checkpoint)
-- **Files modified:** 6 + 3 RSS route fixes
+- **Completed:** 2026-04-02T02:58:04Z
+- **Tasks:** 2 of 2
+- **Files modified:** 7 + 3 RSS route fixes
 
 ## Accomplishments
 - Installed `@giscus/react` and created `GiscusComments` client component with `loading="lazy"` and graceful null return when env vars are unset
@@ -73,8 +73,13 @@ completed: 2026-04-02
 Each task was committed atomically:
 
 1. **Task 1: Install @giscus/react, create GiscusComments component, embed in detail pages, add tests** - `3107890` (feat)
+2. **Task 2: Verify Giscus comment widget on diary and article pages** - user approved visual verification
 
-**Plan metadata:** (pending final commit)
+**Additional commits (post-checkpoint):**
+- `3d32839` (fix) — Updated Giscus `inputPosition` to `"bottom"` per user's real GitHub Discussions config
+- `da54f37` (fix) — Redirect root `page.tsx` to `/en` instead of showing Next.js default page
+
+**Plan metadata:** (see final commit in this session)
 
 ## Files Created/Modified
 - `src/components/engagement/GiscusComments.tsx` - 'use client' Giscus wrapper with env var guard and lazy loading
@@ -128,9 +133,10 @@ To activate comments:
 Without these env vars, the widget returns null (no broken iframe, no error). The site ships and builds correctly without them.
 
 ## Next Phase Readiness
-- Giscus component is built and ready — requires GitHub Discussions setup and env vars to activate
-- Task 2 (human-verify checkpoint) requires human to configure GitHub Discussions and verify the widget renders on diary and article pages
+- Giscus comment widget is fully configured and verified rendering on diary and article pages
+- GitHub Discussions is live on `aquaclawai/aquaclaw-home` with real repoId and categoryId configured in env vars
 - Science pages confirmed Giscus-free (per D-01 decision)
+- Root page now redirects to `/en` instead of showing Next.js default — site is user-facing ready
 
 ---
 *Phase: 11-engagement-polish*
