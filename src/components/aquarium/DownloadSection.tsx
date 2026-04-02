@@ -1,7 +1,7 @@
 import type en from '../../../dictionaries/en.json'
 
 interface DownloadSectionProps {
-  dict: typeof en['openclaw']['download']
+  dict: typeof en['aquarium']['download']
 }
 
 export function DownloadSection({ dict }: DownloadSectionProps) {
@@ -12,7 +12,7 @@ export function DownloadSection({ dict }: DownloadSectionProps) {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* OpenClaw Local card */}
+        {/* Aquarium Local card */}
         <div className="bg-card rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
           <div className="text-4xl font-mono text-primary select-none" aria-hidden="true">
             &gt;_
@@ -26,14 +26,16 @@ export function DownloadSection({ dict }: DownloadSectionProps) {
             </p>
           </div>
           <a
-            href="#"
+            href="https://platform.aquaclaw.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-6 py-3 rounded-pill font-semibold text-center bg-primary text-white transition-transform hover:scale-105"
           >
             {dict.localCta}
           </a>
         </div>
 
-        {/* EasyClaw Cloud card */}
+        {/* Aquarium Cloud card */}
         <div className="bg-card rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
           <div className="text-4xl select-none" aria-hidden="true">
             ☁️
@@ -47,7 +49,9 @@ export function DownloadSection({ dict }: DownloadSectionProps) {
             </p>
           </div>
           <a
-            href="#"
+            href="https://platform.aquaclaw.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-6 py-3 rounded-pill font-semibold text-center bg-accent text-white transition-transform hover:scale-105"
           >
             {dict.cloudCta}

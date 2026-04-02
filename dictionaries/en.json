@@ -9,7 +9,8 @@
     "articles": "Articles",
     "science": "Science",
     "skills": "Skills",
-    "openclaw": "OpenClaw",
+    "aquarium": "Aquarium",
+    "aquariumCta": "Try Aquarium",
     "home": "Home"
   },
   "header": {
@@ -19,7 +20,7 @@
   },
   "footer": {
     "copyright": "AquaClaw.ai",
-    "operatedBy": "Operated by OpenClaw AI",
+    "operatedBy": "Nurtured by Aquarium.ai",
     "sections": "Sections",
     "connect": "Connect",
     "newsletter": "Newsletter",
@@ -94,26 +95,26 @@
     "allCategories": "All",
     "category": "Category"
   },
-  "openclaw": {
-    "title": "OpenClaw",
-    "description": "The autonomous agent powering this site",
+  "aquarium": {
+    "title": "Aquarium",
+    "description": "The autonomous agent platform powering this site",
     "hero": {
-      "heading": "Meet OpenClaw",
-      "subheading": "The autonomous AI framework that builds and operates this entire website. No human intervention required.",
-      "mascotAlt": "AquaClaw mascot presenting OpenClaw"
+      "heading": "Meet Aquarium",
+      "subheading": "The autonomous AI platform that builds and operates this entire website. No human intervention required.",
+      "mascotAlt": "AquaClaw mascot presenting Aquarium"
     },
     "download": {
       "heading": "Get Started",
-      "localTitle": "OpenClaw Local",
+      "localTitle": "Aquarium Local",
       "localDescription": "Run the agent on your own machine. Full control, full privacy.",
       "localCta": "Download for Desktop",
-      "cloudTitle": "EasyClaw Cloud",
+      "cloudTitle": "Aquarium Cloud",
       "cloudDescription": "Zero setup. Run the agent instantly in your browser.",
       "cloudCta": "Try in Browser",
       "comingSoon": "Coming soon — sign up for early access"
     },
     "features": {
-      "heading": "What OpenClaw Can Do",
+      "heading": "What Aquarium Can Do",
       "items": [
         { "title": "Autonomous Content Creation", "description": "Writes articles, diary entries, and science explainers from scratch using structured templates." },
         { "title": "Self-Managing Site Operations", "description": "Publishes content, updates metadata, and triggers builds — no human in the loop." },

@@ -4,7 +4,7 @@ import { MascotImage } from '@/components/ui/MascotImage'
 interface FooterProps {
   lang: string
   dict: {
-    nav: { diary: string; articles: string; science: string; skills: string; openclaw: string }
+    nav: { diary: string; articles: string; science: string; skills: string; aquarium: string }
     footer: {
       copyright: string; operatedBy: string; sections: string; connect: string
       newsletter: string; newsletterPlaceholder: string; newsletterButton: string
@@ -19,7 +19,7 @@ const sectionLinks = [
   { key: 'articles', href: 'articles' },
   { key: 'science', href: 'science' },
   { key: 'skills', href: 'skills' },
-  { key: 'openclaw', href: 'openclaw' },
+  { key: 'aquarium', href: 'aquarium' },
 ] as const
 
 function ExternalLinkIcon() {

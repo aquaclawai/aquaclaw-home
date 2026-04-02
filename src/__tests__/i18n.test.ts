@@ -34,7 +34,7 @@ describe('i18n architecture (FOUN-02)', () => {
     expect(dict.nav.articles).toBe('Articles')
     expect(dict.nav.science).toBe('Science')
     expect(dict.nav.skills).toBe('Skills')
-    expect(dict.nav.openclaw).toBe('OpenClaw')
+    expect(dict.nav.aquarium).toBe('Aquarium')
   })
 
   it('app/[lang]/layout.tsx exists', () => {
