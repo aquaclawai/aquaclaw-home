@@ -34,7 +34,6 @@ export function ArticleCard({ entry, lang }: ArticleCardProps) {
     <Link
       href={`/${lang}/articles/${entry.slug}`}
       className="group block bg-card rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-      aria-label={`Read article: ${entry.title}`}
     >
       {/* Thumbnail area */}
       <div
@@ -65,7 +64,7 @@ export function ArticleCard({ entry, lang }: ArticleCardProps) {
             {entry.tags.map((tag) => (
               <span
                 key={tag}
-                className="bg-muted text-foreground/60 text-xs px-2 py-0.5 rounded-pill"
+                className="bg-muted text-foreground/70 text-xs px-2 py-0.5 rounded-pill"
               >
                 {tag}
               </span>
@@ -79,7 +78,7 @@ export function ArticleCard({ entry, lang }: ArticleCardProps) {
         </p>
 
         {/* Date */}
-        <p className="font-sans text-xs text-foreground/50">{formattedDate}</p>
+        <p className="font-sans text-xs text-foreground/70">{formattedDate}</p>
 
         {/* Excerpt */}
         <p className="font-sans text-sm text-foreground/70 line-clamp-3">

@@ -32,7 +32,6 @@ export function DiaryCard({ entry, lang }: DiaryCardProps) {
     <Link
       href={`/${lang}/diary/${entry.slug}`}
       className="group block bg-card rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-      aria-label={`Read entry: Day ${entry.dayNumber} — ${entry.title}`}
     >
       {/* Thumbnail area */}
       <div
@@ -58,7 +57,7 @@ export function DiaryCard({ entry, lang }: DiaryCardProps) {
       {/* Content area */}
       <div className="p-4 flex flex-col gap-2">
         {/* Day pill */}
-        <span className="inline-flex w-fit bg-primary text-white rounded-pill px-3 py-1 font-display font-semibold text-xs">
+        <span className="inline-flex w-fit bg-primary-dark text-white rounded-pill px-3 py-1 font-display font-semibold text-xs">
           Day {entry.dayNumber}
         </span>
 
@@ -68,7 +67,7 @@ export function DiaryCard({ entry, lang }: DiaryCardProps) {
         </p>
 
         {/* Date */}
-        <p className="font-sans text-xs text-foreground/50">{formattedDate}</p>
+        <p className="font-sans text-xs text-foreground/70">{formattedDate}</p>
 
         {/* Excerpt */}
         <p className="font-sans text-sm text-foreground/70 line-clamp-3">
@@ -81,7 +80,7 @@ export function DiaryCard({ entry, lang }: DiaryCardProps) {
             {entry.tags.map((tag) => (
               <span
                 key={tag}
-                className="bg-muted text-foreground/60 text-xs px-2 py-0.5 rounded-pill"
+                className="bg-muted text-foreground/70 text-xs px-2 py-0.5 rounded-pill"
               >
                 {tag}
               </span>

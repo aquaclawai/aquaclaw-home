@@ -47,7 +47,6 @@ export function ScienceCard({ entry, lang, dict }: ScienceCardProps) {
     <Link
       href={`/${lang}/science/${entry.slug}`}
       className="group block bg-card rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-      aria-label={`Read explainer: ${entry.title}`}
     >
       {/* Thumbnail area */}
       <div
@@ -82,7 +81,7 @@ export function ScienceCard({ entry, lang, dict }: ScienceCardProps) {
           {entry.tags.map((tag) => (
             <span
               key={tag}
-              className="bg-muted text-foreground/60 text-xs px-2 py-0.5 rounded-pill"
+              className="bg-muted text-foreground/70 text-xs px-2 py-0.5 rounded-pill"
             >
               {tag}
             </span>
@@ -95,7 +94,7 @@ export function ScienceCard({ entry, lang, dict }: ScienceCardProps) {
         </p>
 
         {/* Date */}
-        <p className="font-sans text-xs text-foreground/50">{formattedDate}</p>
+        <p className="font-sans text-xs text-foreground/70">{formattedDate}</p>
 
         {/* Excerpt */}
         <p className="font-sans text-sm text-foreground/70 line-clamp-3">

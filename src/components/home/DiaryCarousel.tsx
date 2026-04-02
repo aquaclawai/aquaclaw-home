@@ -73,7 +73,7 @@ export function DiaryCarousel({ entries, lang, dict }: DiaryCarouselProps) {
         <h2 className="font-display text-3xl font-bold">{dict.heading}</h2>
         <Link
           href={`/${lang}/diary`}
-          className="text-primary font-semibold hover:underline"
+          className="text-primary-dark font-semibold hover:underline"
         >
           {dict.viewAll}
         </Link>
@@ -134,18 +134,22 @@ export function DiaryCarousel({ entries, lang, dict }: DiaryCarouselProps) {
       </div>
 
       {/* Dot indicators */}
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="flex justify-center gap-1 mt-4">
         {entries.map((entry, i) => (
           <button
             key={entry.slug}
             onClick={() => setCurrent(i)}
-            className={
-              i === current
-                ? 'bg-primary w-3 h-3 rounded-full'
-                : 'bg-muted w-2 h-2 rounded-full'
-            }
+            className="flex items-center justify-center w-6 h-6 rounded-full"
             aria-label={`Go to slide ${i + 1}`}
-          />
+          >
+            <span
+              className={
+                i === current
+                  ? 'bg-primary-dark block w-3 h-3 rounded-full'
+                  : 'bg-muted block w-2 h-2 rounded-full'
+              }
+            />
+          </button>
         ))}
       </div>
     </section>

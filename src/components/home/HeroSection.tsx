@@ -29,7 +29,7 @@ export function HeroSection({ lang, dict }: HeroSectionProps) {
 
       <Link
         href={`/${lang}/diary`}
-        className="bg-primary text-white rounded-pill px-8 py-3 font-display font-semibold text-lg hover:bg-primary-dark transition-colors inline-block"
+        className="bg-primary-dark text-white rounded-pill px-8 py-3 font-display font-semibold text-lg hover:opacity-90 transition-opacity inline-block"
       >
         {dict.hero.ctaLabel}
       </Link>

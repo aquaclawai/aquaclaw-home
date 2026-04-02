@@ -40,7 +40,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           <div>
             <MascotImage pose="sleeping" size={48} />
             <p className="font-display text-lg font-bold mt-3">{dict.site.name}</p>
-            <p className="text-sm text-foreground/60 mt-1">{dict.footer.operatedBy}</p>
+            <p className="text-sm text-foreground/70 mt-1">{dict.footer.operatedBy}</p>
           </div>
 
           {/* Column 2 — Sections */}
@@ -130,16 +130,16 @@ export default function Footer({ lang, dict }: FooterProps) {
             >
               {dict.footer.newsletterButton}
             </button>
-            <p className="text-xs text-foreground/40 mt-1">{dict.footer.newsletterNote}</p>
+            <p className="text-xs text-foreground/70 mt-1">{dict.footer.newsletterNote}</p>
           </div>
         </div>
 
         {/* Copyright bar */}
         <div className="mt-8 pt-8 border-t border-muted flex flex-col sm:flex-row justify-between items-center gap-2">
-          <p className="text-sm text-foreground/50">
+          <p className="text-sm text-foreground/70">
             &copy; {new Date().getFullYear()} {dict.footer.copyright}
           </p>
-          <p className="text-sm text-foreground/40">{dict.footer.operatedBy}</p>
+          <p className="text-sm text-foreground/70">{dict.footer.operatedBy}</p>
         </div>
       </div>
     </footer>

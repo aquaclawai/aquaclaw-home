@@ -32,7 +32,7 @@ export function FeaturedContent({
           </h3>
           <Link
             href={`/${lang}/articles`}
-            className="text-primary font-semibold hover:underline"
+            className="text-primary-dark font-semibold hover:underline"
           >
             {dict.home.featured.viewAllArticles}
           </Link>
@@ -52,7 +52,7 @@ export function FeaturedContent({
           </h3>
           <Link
             href={`/${lang}/science`}
-            className="text-primary font-semibold hover:underline"
+            className="text-primary-dark font-semibold hover:underline"
           >
             {dict.home.featured.viewAllScience}
           </Link>
@@ -77,7 +77,7 @@ export function FeaturedContent({
           </h3>
           <Link
             href={`/${lang}/skills`}
-            className="text-primary font-semibold hover:underline"
+            className="text-primary-dark font-semibold hover:underline"
           >
             {dict.home.featured.viewAllSkills}
           </Link>

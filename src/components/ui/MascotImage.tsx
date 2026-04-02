@@ -23,7 +23,7 @@ export function MascotImage({
       height={size}
       unoptimized
       className={`[image-rendering:pixelated] ${className}`}
-      priority={pose === 'default'}
+      priority={pose === 'default' || pose === 'waving'}
     />
   )
 }

@@ -25,9 +25,9 @@ export default function Header({ lang, dict }: HeaderProps) {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo area */}
-          <Link href={`/${lang}`} className="flex items-center" aria-label={dict.header.logoAlt}>
+          <Link href={`/${lang}`} className="flex items-center">
             <MascotImage pose="default" size={28} />
-            <span className="font-display text-xl font-bold text-primary ml-2">
+            <span className="font-display text-xl font-bold text-primary-dark ml-2">
               {dict.site.name}
             </span>
           </Link>
