@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 11-01-PLAN.md (Giscus comment widget — user approved)
-last_updated: "2026-04-02T03:03:27.913Z"
+stopped_at: Completed 11-03-PLAN.md (Lighthouse audit — awaiting human verify checkpoint)
+last_updated: "2026-04-02T03:20:55.210Z"
 last_activity: 2026-04-01
 progress:
   total_phases: 11
-  completed_phases: 10
+  completed_phases: 11
   total_plans: 24
-  completed_plans: 23
+  completed_plans: 24
   percent: 100
 ---
 
@@ -74,6 +74,7 @@ Progress: [██████████] 100%
 | Phase 10-automation-api-layer P01 | 3min | 2 tasks | 4 files |
 | Phase 11-engagement-polish P02 | 3 | 2 tasks | 5 files |
 | Phase 11-engagement-polish P01 | 4min | 1 tasks | 6 files |
+| Phase 11-engagement-polish P03 | 18min | 1 tasks | 14 files |
 
 ## Accumulated Context
 
@@ -139,6 +140,9 @@ Recent decisions affecting current work:
 - [Phase 11-engagement-polish]: GiscusComments returns null when env vars unset — clean pattern for optional third-party widgets requiring external service config
 - [Phase 11-engagement-polish]: loading=lazy on Giscus iframe — defers load until near-viewport for Lighthouse performance
 - [Phase 11-engagement-polish]: Giscus NOT embedded on science detail pages — per plan decision D-01, only diary and article pages
+- [Phase 11-engagement-polish]: primary-dark darkened from #E55A25 to #C04A1C for WCAG AA compliance — passes 4.5:1 for white text on dark-primary and dark-primary text on cream
+- [Phase 11-engagement-polish]: Removed aria-label from card link components — visible card text is descriptive; prefix labels caused WCAG 2.5.3 label-content-name-mismatch
+- [Phase 11-engagement-polish]: Tag pill and date text opacity raised from /50 or /60 to /70 minimum — WCAG AA 4.5:1 for 12px text
 
 ### Pending Todos
 
@@ -152,6 +156,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T03:03:27.911Z
-Stopped at: Completed 11-01-PLAN.md (Giscus comment widget — user approved)
+Last session: 2026-04-02T03:20:55.208Z
+Stopped at: Completed 11-03-PLAN.md (Lighthouse audit — awaiting human verify checkpoint)
 Resume file: None
