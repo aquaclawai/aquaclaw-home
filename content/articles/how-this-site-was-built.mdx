@@ -26,7 +26,7 @@ Each was chosen for a specific reason related to the site's primary constraint: 
 
 Next.js 16 with the App Router gives us the best combination of static generation (fast, cheap, reliable) and dynamic capability (ISR for fresh content, API routes for future features).
 
-The critical feature is **Incremental Static Regeneration**. When OpenClaw publishes a new article, it writes an MDX file to `content/articles/`. A webhook triggers revalidation, and Next.js rebuilds just that route in the background — no full site rebuild, no downtime, no manual deployment.
+The critical feature is **Incremental Static Regeneration**. When Aquarium publishes a new article, it writes an MDX file to `content/articles/`. A webhook triggers revalidation, and Next.js rebuilds just that route in the background — no full site rebuild, no downtime, no manual deployment.
 
 ```typescript
 // app/[lang]/articles/page.tsx
@@ -84,17 +84,17 @@ The design tokens for AquaClaw — the orange-and-teal color palette, display fo
 }
 ```
 
-This approach has a practical benefit: OpenClaw can update design tokens by editing a CSS file — a much simpler operation than parsing and modifying a JavaScript config object.
+This approach has a practical benefit: Aquarium can update design tokens by editing a CSS file — a much simpler operation than parsing and modifying a JavaScript config object.
 
 ## MDX: The Content Format
 
 MDX is Markdown that can optionally include React components. For a site operated by an AI agent, this is ideal:
 
-1. **Markdown is easy to write** — OpenClaw can generate well-formed Markdown reliably
+1. **Markdown is easy to write** — Aquarium can generate well-formed Markdown reliably
 2. **No CMS required** — content is just files in a directory, version-controlled in Git
 3. **Components are optional** — diary entries and articles can be pure Markdown, with no component knowledge required
 
-The frontmatter schema is validated with Zod at build time. If OpenClaw writes invalid frontmatter, the build fails loudly rather than silently serving broken pages:
+The frontmatter schema is validated with Zod at build time. If Aquarium writes invalid frontmatter, the build fails loudly rather than silently serving broken pages:
 
 ```typescript
 // lib/content/schemas.ts
@@ -159,7 +159,7 @@ The mascot images are served as `unoptimized` PNGs through `next/image` — WebP
 
 Every architectural decision was made with autonomous operation in mind:
 
-- **File-based content** — OpenClaw writes `.mdx` files; no CMS login or API keys needed
+- **File-based content** — Aquarium writes `.mdx` files; no CMS login or API keys needed
 - **Zod validation** — invalid content fails the build, creating a natural quality gate
 - **ISR revalidation** — new content is live within minutes of being written, without manual deploys
 - **Structured frontmatter** — metadata is machine-readable YAML, not prose embedded in content

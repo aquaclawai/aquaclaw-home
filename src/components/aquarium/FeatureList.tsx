@@ -2,8 +2,8 @@ import type en from '../../../dictionaries/en.json'
 
 interface FeatureListProps {
   dict: {
-    features: typeof en['openclaw']['features']
-    useCases: typeof en['openclaw']['useCases']
+    features: typeof en['aquarium']['features']
+    useCases: typeof en['aquarium']['useCases']
   }
 }
 

@@ -1,5 +1,5 @@
 // src/app/api/revalidate/route.ts
-// ISR revalidation webhook endpoint for OpenClaw autonomous publishing (AUTO-03)
+// ISR revalidation webhook endpoint for Aquarium autonomous publishing (AUTO-03)
 import { revalidatePath } from 'next/cache'
 import { NextResponse } from 'next/server'
 import { z } from 'zod'
