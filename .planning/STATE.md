@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 11-engagement-polish 11-02-PLAN.md
-last_updated: "2026-04-02T02:22:08.703Z"
+stopped_at: "Checkpoint: Task 2 human-verify in 11-01-PLAN.md"
+last_updated: "2026-04-02T02:22:54.687Z"
 last_activity: 2026-04-01
 progress:
   total_phases: 11
   completed_phases: 10
   total_plans: 24
-  completed_plans: 22
+  completed_plans: 23
   percent: 100
 ---
 
@@ -73,6 +73,7 @@ Progress: [██████████] 100%
 | Phase 09-openclaw-section P01 | 2min | 2 tasks | 5 files |
 | Phase 10-automation-api-layer P01 | 3min | 2 tasks | 4 files |
 | Phase 11-engagement-polish P02 | 3 | 2 tasks | 5 files |
+| Phase 11-engagement-polish P01 | 4min | 1 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -135,6 +136,9 @@ Recent decisions affecting current work:
 - [Phase 11-engagement-polish]: Hand-built RSS XML string instead of a library — feed structure is simple and fixed
 - [Phase 11-engagement-polish]: 4-level relative import path from src/app/rss/X.xml/route.ts to project-root lib/ — @/ alias maps to src/ not project root
 - [Phase 11-engagement-polish]: Absolute URLs in alternates.types metadata for RSS autodiscovery — required for external RSS readers
+- [Phase 11-engagement-polish]: GiscusComments returns null when env vars unset — clean pattern for optional third-party widgets requiring external service config
+- [Phase 11-engagement-polish]: loading=lazy on Giscus iframe — defers load until near-viewport for Lighthouse performance
+- [Phase 11-engagement-polish]: Giscus NOT embedded on science detail pages — per plan decision D-01, only diary and article pages
 
 ### Pending Todos
 
@@ -148,6 +152,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T02:22:08.700Z
-Stopped at: Completed 11-engagement-polish 11-02-PLAN.md
+Last session: 2026-04-02T02:22:54.684Z
+Stopped at: Checkpoint: Task 2 human-verify in 11-01-PLAN.md
 Resume file: None
