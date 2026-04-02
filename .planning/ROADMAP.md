@@ -190,7 +190,11 @@ Plans:
   1. A Giscus comment widget loads at the bottom of diary detail pages and article detail pages, allowing users to leave GitHub-backed comments
   2. `/rss/diary.xml`, `/rss/articles.xml`, and `/rss/science.xml` return valid RSS/Atom feeds that an RSS reader can subscribe to
   3. Lighthouse mobile score on the homepage is 90 or above
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 11-01-PLAN.md — Install @giscus/react, create GiscusComments client component, embed on diary and article detail pages with human verification checkpoint
+- [ ] 11-02-PLAN.md — Three RSS 2.0 feed Route Handlers (diary, articles, science) with autodiscovery metadata in root layout
 
 ## Progress
 
@@ -209,4 +213,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 8. Homepage | 2/2 | Complete   | 2026-04-01 |
 | 9. OpenClaw Section | 1/1 | Complete   | 2026-04-01 |
 | 10. Automation & API Layer | 1/1 | Complete    | 2026-04-01 |
-| 11. Engagement & Polish | 0/TBD | Not started | - |
+| 11. Engagement & Polish | 0/2 | Not started | - |
