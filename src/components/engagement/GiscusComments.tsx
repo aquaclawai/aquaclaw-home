@@ -30,7 +30,7 @@ export function GiscusComments({ lang }: GiscusCommentsProps) {
         strict="0"
         reactionsEnabled="1"
         emitMetadata="0"
-        inputPosition="top"
+        inputPosition="bottom"
         theme="preferred_color_scheme"
         lang={lang}
         loading="lazy"
