@@ -4,7 +4,7 @@ import { getDiaryEntries } from '../../../../lib/content/diary'
 const BASE_URL = 'https://aquaclaw.ai'
 
 export async function GET() {
-  const entries = getDiaryEntries()
+  const entries = await getDiaryEntries()
 
   const items = entries
     .map(

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { getScienceEntries, getScienceBySlug } from '../../../../../lib/content/science'
 import { getDictionary, type Locale } from '@/lib/i18n/getDictionary'
 import { SciencePrevNext } from '@/components/science/SciencePrevNext'
+import { renderMDX } from '../../../../../lib/content/mdx'
 
 interface SciencePageProps {
   params: Promise<{ lang: string; slug: string }>
@@ -19,7 +20,7 @@ const DIFFICULTY_STYLES: Record<string, string> = {
 }
 
 export async function generateStaticParams() {
-  const entries = getScienceEntries()
+  const entries = await getScienceEntries()
   const locales = ['en']
   return locales.flatMap((lang) =>
     entries.map((entry) => ({ lang, slug: entry.slug }))
@@ -28,7 +29,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: SciencePageProps) {
   const { slug } = await params
-  const entry = getScienceBySlug(slug)
+  const entry = await getScienceBySlug(slug)
   if (!entry) return {}
   return {
     title: entry.title,
@@ -44,23 +45,16 @@ export async function generateMetadata({ params }: SciencePageProps) {
 
 export default async function ScienceDetailPage({ params }: SciencePageProps) {
   const { lang, slug } = await params
-  const entry = getScienceBySlug(slug)
+  const entry = await getScienceBySlug(slug)
   if (!entry) notFound()
 
   const dict = await getDictionary(lang as Locale)
 
-  // Dynamic MDX import — relative path from this file to project root content/
-  // Falls back to raw content if MDX import fails
-  let MDXContent: React.ComponentType | null = null
-  try {
-    const mdxModule = await import(`../../../../../content/science/${slug}.mdx`)
-    MDXContent = mdxModule.default
-  } catch {
-    // Fall through to raw content rendering
-  }
+  // Render MDX content from Blob
+  const mdxContent = entry.content ? await renderMDX(entry.content) : null
 
   // Compute prev/next (entries are newest-first, so prev=older=higher index, next=newer=lower index)
-  const entries = getScienceEntries()
+  const entries = await getScienceEntries()
   const currentIndex = entries.findIndex((e) => e.slug === slug)
   const prevEntry =
     currentIndex < entries.length - 1 ? entries[currentIndex + 1] : null // older
@@ -112,10 +106,7 @@ export default async function ScienceDetailPage({ params }: SciencePageProps) {
 
       {/* MDX content — Further Reading section renders inside prose via MDX */}
       <article className="prose prose-lg prose-headings:font-display prose-a:text-primary max-w-prose mx-auto mb-16">
-        {MDXContent ? (
-          <MDXContent />
-        ) : (
-          // Fallback: render raw content if MDX import fails
+        {mdxContent ?? (
           <div className="whitespace-pre-wrap font-sans text-foreground/80">
             {entry.content}
           </div>

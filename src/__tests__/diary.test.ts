@@ -130,13 +130,13 @@ describe('seed diary entries via getDiaryEntries()', () => {
 
   it('getDiaryEntries returns exactly 5 seed entries', async () => {
     const { getDiaryEntries } = await import('../../lib/content/diary')
-    const entries = getDiaryEntries()
+    const entries = await getDiaryEntries()
     expect(entries).toHaveLength(5)
   })
 
   it('getDiaryEntries returns entries sorted newest-first (date descending)', async () => {
     const { getDiaryEntries } = await import('../../lib/content/diary')
-    const entries = getDiaryEntries()
+    const entries = await getDiaryEntries()
     for (let i = 0; i < entries.length - 1; i++) {
       const a = new Date(entries[i]!.date).getTime()
       const b = new Date(entries[i + 1]!.date).getTime()
@@ -146,14 +146,14 @@ describe('seed diary entries via getDiaryEntries()', () => {
 
   it('seed entries have dayNumber 1 through 5', async () => {
     const { getDiaryEntries } = await import('../../lib/content/diary')
-    const entries = getDiaryEntries()
+    const entries = await getDiaryEntries()
     const dayNumbers = entries.map((e) => e.dayNumber).sort((a, b) => a - b)
     expect(dayNumbers).toEqual([1, 2, 3, 4, 5])
   })
 
   it('all seed entries have non-empty title, excerpt, and at least one tag', async () => {
     const { getDiaryEntries } = await import('../../lib/content/diary')
-    const entries = getDiaryEntries()
+    const entries = await getDiaryEntries()
     for (const entry of entries) {
       expect(entry.title.length).toBeGreaterThan(0)
       expect(entry.excerpt.length).toBeGreaterThan(0)
@@ -163,7 +163,7 @@ describe('seed diary entries via getDiaryEntries()', () => {
 
   it('day-001 entry has cat persona indicators in excerpt or content', async () => {
     const { getDiaryEntry } = await import('../../lib/content/diary')
-    const entry = getDiaryEntry('day-001')
+    const entry = await getDiaryEntry('day-001')
     expect(entry).not.toBeNull()
     // Cat persona: first person voice and cat-like language
     const text = `${entry!.excerpt} ${entry!.content}`.toLowerCase()
@@ -180,6 +180,6 @@ describe('seed diary entries via getDiaryEntries()', () => {
 
   it('getDiaryEntry returns null for non-existent slug', async () => {
     const { getDiaryEntry } = await import('../../lib/content/diary')
-    expect(getDiaryEntry('does-not-exist')).toBeNull()
+    expect(await getDiaryEntry('does-not-exist')).toBeNull()
   })
 })

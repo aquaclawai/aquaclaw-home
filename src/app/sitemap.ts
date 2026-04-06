@@ -7,11 +7,11 @@ import { getSkillEntries } from '../../lib/content/skills'
 
 const BASE_URL = 'https://aquaclaw.ai'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const diaryEntries = getDiaryEntries()
-  const articleEntries = getArticleEntries()
-  const scienceEntries = getScienceEntries()
-  const skillEntries = getSkillEntries()
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const diaryEntries = await getDiaryEntries()
+  const articleEntries = await getArticleEntries()
+  const scienceEntries = await getScienceEntries()
+  const skillEntries = await getSkillEntries()
 
   const diaryRoutes = diaryEntries.map((entry) => ({
     url: `${BASE_URL}/en/diary/${entry.slug}`,

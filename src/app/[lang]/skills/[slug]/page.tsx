@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getSkillEntries, getSkillBySlug } from '../../../../../lib/content/skills'
 import { getDictionary, type Locale } from '@/lib/i18n/getDictionary'
+import { renderMDX } from '../../../../../lib/content/mdx'
 
 export const revalidate = 3600
 
@@ -11,7 +12,7 @@ interface SkillDetailPageProps {
 }
 
 export async function generateStaticParams() {
-  const entries = getSkillEntries()
+  const entries = await getSkillEntries()
   const locales = ['en']
   return locales.flatMap((lang) =>
     entries.map((entry) => ({ lang, slug: entry.slug }))
@@ -20,7 +21,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: SkillDetailPageProps) {
   const { slug } = await params
-  const entry = getSkillBySlug(slug)
+  const entry = await getSkillBySlug(slug)
   if (!entry) return {}
   return {
     title: entry.title,
@@ -36,19 +37,13 @@ export async function generateMetadata({ params }: SkillDetailPageProps) {
 
 export default async function SkillDetailPage({ params }: SkillDetailPageProps) {
   const { lang, slug } = await params
-  const entry = getSkillBySlug(slug)
+  const entry = await getSkillBySlug(slug)
   if (!entry) notFound()
 
   const dict = await getDictionary(lang as Locale)
 
-  // Dynamic MDX import — relative path from this file (5 levels up) to project root content/
-  let MDXContent: React.ComponentType | null = null
-  try {
-    const mdxModule = await import(`../../../../../content/skills/${slug}.mdx`)
-    MDXContent = mdxModule.default
-  } catch {
-    // Fall through to raw content rendering
-  }
+  // Render MDX content from Blob
+  const mdxContent = entry.content ? await renderMDX(entry.content) : null
 
   const formattedDate = new Date(entry.date).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -106,10 +101,7 @@ export default async function SkillDetailPage({ params }: SkillDetailPageProps) 
 
       {/* MDX content — feature list in MDX body renders as styled bullet points via typography plugin */}
       <article className="prose prose-lg prose-headings:font-display prose-a:text-primary max-w-prose mx-auto mb-16">
-        {MDXContent ? (
-          <MDXContent />
-        ) : (
-          // Fallback: render raw content if MDX import fails
+        {mdxContent ?? (
           <div className="whitespace-pre-wrap font-sans text-foreground/80">
             {entry.content}
           </div>

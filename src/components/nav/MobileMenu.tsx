@@ -7,7 +7,7 @@ import { MascotImage } from '@/components/ui/MascotImage'
 interface MobileMenuProps {
   lang: string
   dict: {
-    nav: { diary: string; articles: string; science: string; skills: string; aquarium: string; aquariumCta: string; home: string }
+    nav: { diary: string; articles: string; science: string; skills: string; aquarium: string; aquariumCta: string; home: string; feedback: string }
     header: { menuClose: string }
   }
   isOpen: boolean
@@ -22,6 +22,11 @@ const navLinks = [
   { key: 'skills', href: 'skills' },
   { key: 'aquarium', href: 'aquarium' },
 ] as const
+
+const feedbackLinks = [
+  { label: 'GitHub Issues', href: 'https://github.com/aquaclawai/aquarium-ce/issues' },
+  { label: 'tech@aquaclaw.ai', href: 'mailto:tech@aquaclaw.ai' },
+]
 
 export default function MobileMenu({ lang, dict, isOpen, onClose }: MobileMenuProps) {
   // Escape key handler
@@ -90,6 +95,23 @@ export default function MobileMenu({ lang, dict, isOpen, onClose }: MobileMenuPr
             </li>
           ))}
         </ul>
+
+        {/* Feedback links */}
+        <div className="mt-8 flex flex-col items-center gap-3">
+          <p className="text-sm font-sans font-semibold text-foreground/50">{dict.nav.feedback}</p>
+          {feedbackLinks.map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              target={href.startsWith('mailto:') ? undefined : '_blank'}
+              rel={href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+              onClick={onClose}
+              className="text-sm font-sans text-foreground/70 hover:text-primary transition-colors"
+            >
+              {label}
+            </a>
+          ))}
+        </div>
 
         {/* Waving mascot at bottom */}
         <div className="absolute bottom-12 animate-float">

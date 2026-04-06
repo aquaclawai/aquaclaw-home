@@ -15,7 +15,7 @@ interface PaginationPageProps {
 }
 
 export async function generateStaticParams() {
-  const entries = getArticleEntries()
+  const entries = await getArticleEntries()
   const totalPages = Math.ceil(entries.length / PAGE_SIZE)
   const locales = ['en']
   return locales.flatMap((lang) =>
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PaginationPageProps) {
 export default async function ArticlesPaginationPage({ params }: PaginationPageProps) {
   const { lang, page } = await params
   const pageNum = Number(page)
-  const entries = getArticleEntries()
+  const entries = await getArticleEntries()
   const totalPages = Math.ceil(entries.length / PAGE_SIZE)
 
   // Redirect page 1 to avoid duplicate content

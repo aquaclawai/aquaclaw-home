@@ -89,13 +89,13 @@ describe('seed skill packs via getSkillEntries()', () => {
 
   it('getSkillEntries returns exactly 5 seed entries', async () => {
     const { getSkillEntries } = await import('../../lib/content/skills')
-    const entries = getSkillEntries()
+    const entries = await getSkillEntries()
     expect(entries).toHaveLength(5)
   })
 
   it('getSkillEntries returns entries sorted newest-first (date descending)', async () => {
     const { getSkillEntries } = await import('../../lib/content/skills')
-    const entries = getSkillEntries()
+    const entries = await getSkillEntries()
     for (let i = 0; i < entries.length - 1; i++) {
       const a = new Date(entries[i]!.date).getTime()
       const b = new Date(entries[i + 1]!.date).getTime()
@@ -105,7 +105,7 @@ describe('seed skill packs via getSkillEntries()', () => {
 
   it('all seed entries have non-empty title, excerpt, and at least one tag', async () => {
     const { getSkillEntries } = await import('../../lib/content/skills')
-    const entries = getSkillEntries()
+    const entries = await getSkillEntries()
     for (const entry of entries) {
       expect(entry.title.length, `${entry.slug} title`).toBeGreaterThan(0)
       expect(entry.excerpt.length, `${entry.slug} excerpt`).toBeGreaterThan(0)
@@ -115,12 +115,12 @@ describe('seed skill packs via getSkillEntries()', () => {
 
   it('getSkillBySlug returns null for non-existent slug', async () => {
     const { getSkillBySlug } = await import('../../lib/content/skills')
-    expect(getSkillBySlug('does-not-exist')).toBeNull()
+    expect(await getSkillBySlug('does-not-exist')).toBeNull()
   })
 
   it('getSkillBySlug returns correct entry for known slug', async () => {
     const { getSkillBySlug } = await import('../../lib/content/skills')
-    const entry = getSkillBySlug('content-writing-pack')
+    const entry = await getSkillBySlug('content-writing-pack')
     expect(entry).not.toBeNull()
     expect(entry?.title).toBeTruthy()
     expect(entry?.slug).toBe('content-writing-pack')
@@ -128,7 +128,7 @@ describe('seed skill packs via getSkillEntries()', () => {
 
   it('all seed entries have non-empty category field (SKIL-03)', async () => {
     const { getSkillEntries } = await import('../../lib/content/skills')
-    const entries = getSkillEntries()
+    const entries = await getSkillEntries()
     for (const entry of entries) {
       expect(
         entry.category.length,
@@ -139,7 +139,7 @@ describe('seed skill packs via getSkillEntries()', () => {
 
   it('all seed entries have valid downloadUrl field (SKIL-02) — starts with https://', async () => {
     const { getSkillEntries } = await import('../../lib/content/skills')
-    const entries = getSkillEntries()
+    const entries = await getSkillEntries()
     for (const entry of entries) {
       expect(
         entry.downloadUrl.startsWith('https://'),
@@ -150,15 +150,15 @@ describe('seed skill packs via getSkillEntries()', () => {
 
   it('all seed entries cover different categories (D-14) — unique category count equals 5', async () => {
     const { getSkillEntries } = await import('../../lib/content/skills')
-    const entries = getSkillEntries()
+    const entries = await getSkillEntries()
     const uniqueCategories = new Set(entries.map((e) => e.category))
     expect(uniqueCategories.size).toBe(5)
   })
 
   it('at least one entry content contains a markdown bullet list', async () => {
-    const { getSkillEntries } = await import('../../lib/content/skills')
-    const entries = getSkillEntries()
-    const hasListEntry = entries.some((e) => e.content.includes('- '))
-    expect(hasListEntry, 'At least one skill pack should have a markdown bullet list in content').toBe(true)
+    const { getSkillBySlug } = await import('../../lib/content/skills')
+    const entry = await getSkillBySlug('content-writing-pack')
+    expect(entry).not.toBeNull()
+    expect(entry!.content.includes('- '), 'Skill pack should have a markdown bullet list in content').toBe(true)
   })
 })

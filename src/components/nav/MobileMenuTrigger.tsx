@@ -6,7 +6,7 @@ import MobileMenu from './MobileMenu'
 interface MobileMenuTriggerProps {
   lang: string
   dict: {
-    nav: { diary: string; articles: string; science: string; skills: string; aquarium: string; aquariumCta: string; home: string }
+    nav: { diary: string; articles: string; science: string; skills: string; aquarium: string; aquariumCta: string; home: string; feedback: string }
     header: { menuOpen: string; menuClose: string }
   }
 }

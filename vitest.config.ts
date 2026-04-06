@@ -14,6 +14,9 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       'server-only': path.resolve(__dirname, './src/__mocks__/server-only.ts'),
+      '../../lib/content/blob': path.resolve(__dirname, './src/__mocks__/blob.ts'),
+      '../blob': path.resolve(__dirname, './src/__mocks__/blob.ts'),
+      './blob': path.resolve(__dirname, './src/__mocks__/blob.ts'),
     },
   },
 })

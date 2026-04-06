@@ -137,13 +137,13 @@ describe('seed science explainers via getScienceEntries()', () => {
 
   it('getScienceEntries returns exactly 5 seed entries', async () => {
     const { getScienceEntries } = await import('../../lib/content/science')
-    const entries = getScienceEntries()
+    const entries = await getScienceEntries()
     expect(entries).toHaveLength(5)
   })
 
   it('getScienceEntries returns entries sorted newest-first (date descending)', async () => {
     const { getScienceEntries } = await import('../../lib/content/science')
-    const entries = getScienceEntries()
+    const entries = await getScienceEntries()
     for (let i = 0; i < entries.length - 1; i++) {
       const a = new Date(entries[i]!.date).getTime()
       const b = new Date(entries[i + 1]!.date).getTime()
@@ -153,7 +153,7 @@ describe('seed science explainers via getScienceEntries()', () => {
 
   it('all seed entries have non-empty title, excerpt, and at least one tag', async () => {
     const { getScienceEntries } = await import('../../lib/content/science')
-    const entries = getScienceEntries()
+    const entries = await getScienceEntries()
     for (const entry of entries) {
       expect(entry.title.length, `${entry.slug} title`).toBeGreaterThan(0)
       expect(entry.excerpt.length, `${entry.slug} excerpt`).toBeGreaterThan(0)
@@ -163,12 +163,12 @@ describe('seed science explainers via getScienceEntries()', () => {
 
   it('getScienceBySlug returns null for non-existent slug', async () => {
     const { getScienceBySlug } = await import('../../lib/content/science')
-    expect(getScienceBySlug('does-not-exist')).toBeNull()
+    expect(await getScienceBySlug('does-not-exist')).toBeNull()
   })
 
   it('getScienceBySlug returns the correct entry for a known slug', async () => {
     const { getScienceBySlug } = await import('../../lib/content/science')
-    const entry = getScienceBySlug('what-is-artificial-intelligence')
+    const entry = await getScienceBySlug('what-is-artificial-intelligence')
     expect(entry).not.toBeNull()
     expect(entry?.title).toBeTruthy()
     expect(entry?.slug).toBe('what-is-artificial-intelligence')
@@ -179,7 +179,7 @@ describe('seed science explainers via getScienceEntries()', () => {
 
   it('all seed entries have a valid difficulty field', async () => {
     const { getScienceEntries } = await import('../../lib/content/science')
-    const entries = getScienceEntries()
+    const entries = await getScienceEntries()
     for (const entry of entries) {
       expect(
         VALID_DIFFICULTIES.includes(entry.difficulty),
@@ -190,14 +190,14 @@ describe('seed science explainers via getScienceEntries()', () => {
 
   it('at least one entry is beginner difficulty', async () => {
     const { getScienceEntries } = await import('../../lib/content/science')
-    const entries = getScienceEntries()
+    const entries = await getScienceEntries()
     const hasBeginnerEntry = entries.some((e) => e.difficulty === 'beginner')
     expect(hasBeginnerEntry).toBe(true)
   })
 
   it('at least one entry is intermediate difficulty', async () => {
     const { getScienceEntries } = await import('../../lib/content/science')
-    const entries = getScienceEntries()
+    const entries = await getScienceEntries()
     const hasIntermediateEntry = entries.some((e) => e.difficulty === 'intermediate')
     expect(hasIntermediateEntry).toBe(true)
   })

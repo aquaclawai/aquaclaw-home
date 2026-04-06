@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: SciencePageProps) {
 export default async function SciencePage({ params }: SciencePageProps) {
   const { lang } = await params
   const dict = await getDictionary(lang as Locale)
-  const entries = getScienceEntries()
+  const entries = await getScienceEntries()
   const pageEntries = entries.slice(0, PAGE_SIZE)
   const totalPages = Math.ceil(entries.length / PAGE_SIZE)
 

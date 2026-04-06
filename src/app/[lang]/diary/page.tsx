@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: DiaryPageProps) {
 export default async function DiaryPage({ params }: DiaryPageProps) {
   const { lang } = await params
   const dict = await getDictionary(lang as Locale)
-  const entries = getDiaryEntries()
+  const entries = await getDiaryEntries()
   const pageEntries = entries.slice(0, PAGE_SIZE)
   const totalPages = Math.ceil(entries.length / PAGE_SIZE)
 

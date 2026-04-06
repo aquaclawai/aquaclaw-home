@@ -4,7 +4,7 @@ import { getScienceEntries } from '../../../../lib/content/science'
 const BASE_URL = 'https://aquaclaw.ai'
 
 export async function GET() {
-  const entries = getScienceEntries()
+  const entries = await getScienceEntries()
 
   const items = entries
     .map(

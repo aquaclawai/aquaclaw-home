@@ -5,6 +5,7 @@ import { getArticleEntries, getArticleBySlug } from '../../../../../lib/content/
 import { getDictionary, type Locale } from '@/lib/i18n/getDictionary'
 import { ArticlePrevNext } from '@/components/articles/ArticlePrevNext'
 import { GiscusComments } from '@/components/engagement/GiscusComments'
+import { renderMDX } from '../../../../../lib/content/mdx'
 
 interface ArticlePageProps {
   params: Promise<{ lang: string; slug: string }>
@@ -13,7 +14,7 @@ interface ArticlePageProps {
 export const revalidate = 3600
 
 export async function generateStaticParams() {
-  const entries = getArticleEntries()
+  const entries = await getArticleEntries()
   const locales = ['en']
   return locales.flatMap((lang) =>
     entries.map((entry) => ({ lang, slug: entry.slug }))
@@ -22,7 +23,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: ArticlePageProps) {
   const { slug } = await params
-  const entry = getArticleBySlug(slug)
+  const entry = await getArticleBySlug(slug)
   if (!entry) return {}
   return {
     title: entry.title,
@@ -38,23 +39,16 @@ export async function generateMetadata({ params }: ArticlePageProps) {
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const { lang, slug } = await params
-  const entry = getArticleBySlug(slug)
+  const entry = await getArticleBySlug(slug)
   if (!entry) notFound()
 
   const dict = await getDictionary(lang as Locale)
 
-  // Dynamic MDX import — relative path from this file to project root content/
-  // Falls back to raw content if MDX import fails
-  let MDXContent: React.ComponentType | null = null
-  try {
-    const mdxModule = await import(`../../../../../content/articles/${slug}.mdx`)
-    MDXContent = mdxModule.default
-  } catch {
-    // Fall through to raw content rendering
-  }
+  // Render MDX content from Blob
+  const mdxContent = entry.content ? await renderMDX(entry.content) : null
 
   // Compute prev/next (entries are newest-first, so prev=older=higher index, next=newer=lower index)
-  const entries = getArticleEntries()
+  const entries = await getArticleEntries()
   const currentIndex = entries.findIndex((e) => e.slug === slug)
   const prevEntry =
     currentIndex < entries.length - 1 ? entries[currentIndex + 1] : null // older entry
@@ -103,10 +97,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
       {/* MDX content */}
       <article className="prose prose-lg prose-headings:font-display prose-a:text-primary max-w-prose mx-auto mb-16">
-        {MDXContent ? (
-          <MDXContent />
-        ) : (
-          // Fallback: render raw content if MDX import fails
+        {mdxContent ?? (
           <div className="whitespace-pre-wrap font-sans text-foreground/80">
             {entry.content}
           </div>

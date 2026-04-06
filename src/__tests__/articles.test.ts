@@ -143,13 +143,13 @@ describe('seed articles via getArticleEntries()', () => {
 
   it('getArticleEntries returns exactly 5 seed entries', async () => {
     const { getArticleEntries } = await import('../../lib/content/articles')
-    const entries = getArticleEntries()
+    const entries = await getArticleEntries()
     expect(entries).toHaveLength(5)
   })
 
   it('getArticleEntries returns entries sorted newest-first (date descending)', async () => {
     const { getArticleEntries } = await import('../../lib/content/articles')
-    const entries = getArticleEntries()
+    const entries = await getArticleEntries()
     for (let i = 0; i < entries.length - 1; i++) {
       const a = new Date(entries[i]!.date).getTime()
       const b = new Date(entries[i + 1]!.date).getTime()
@@ -159,7 +159,7 @@ describe('seed articles via getArticleEntries()', () => {
 
   it('all seed articles have non-empty title, excerpt, and at least one tag', async () => {
     const { getArticleEntries } = await import('../../lib/content/articles')
-    const entries = getArticleEntries()
+    const entries = await getArticleEntries()
     for (const entry of entries) {
       expect(entry.title.length, `${entry.slug} title`).toBeGreaterThan(0)
       expect(entry.excerpt.length, `${entry.slug} excerpt`).toBeGreaterThan(0)
@@ -168,20 +168,20 @@ describe('seed articles via getArticleEntries()', () => {
   })
 
   it('at least one article contains a code block (triple backtick)', async () => {
-    const { getArticleEntries } = await import('../../lib/content/articles')
-    const entries = getArticleEntries()
-    const hasCodeBlock = entries.some((e) => e.content.includes('```'))
-    expect(hasCodeBlock).toBe(true)
+    const { getArticleBySlug } = await import('../../lib/content/articles')
+    const entry = await getArticleBySlug('how-this-site-was-built')
+    expect(entry).not.toBeNull()
+    expect(entry!.content.includes('```')).toBe(true)
   })
 
   it('getArticleBySlug returns null for non-existent slug', async () => {
     const { getArticleBySlug } = await import('../../lib/content/articles')
-    expect(getArticleBySlug('does-not-exist')).toBeNull()
+    expect(await getArticleBySlug('does-not-exist')).toBeNull()
   })
 
   it('getArticleBySlug returns the correct entry for a known slug', async () => {
     const { getArticleBySlug } = await import('../../lib/content/articles')
-    const entry = getArticleBySlug('building-ai-agent-from-scratch')
+    const entry = await getArticleBySlug('building-ai-agent-from-scratch')
     expect(entry).not.toBeNull()
     expect(entry?.title).toBeTruthy()
     expect(entry?.slug).toBe('building-ai-agent-from-scratch')
@@ -189,7 +189,7 @@ describe('seed articles via getArticleEntries()', () => {
 
   it('seed articles have no dayNumber property (unlike diary entries)', async () => {
     const { getArticleEntries } = await import('../../lib/content/articles')
-    const entries = getArticleEntries()
+    const entries = await getArticleEntries()
     for (const entry of entries) {
       expect('dayNumber' in entry).toBe(false)
     }

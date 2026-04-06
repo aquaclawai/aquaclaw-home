@@ -50,28 +50,28 @@ describe('homepage dictionary structure', () => {
 describe('homepage content availability', () => {
   it('getDiaryEntries returns a non-empty array', async () => {
     const { getDiaryEntries } = await import('../../lib/content/diary')
-    const entries = getDiaryEntries()
+    const entries = await getDiaryEntries()
     expect(Array.isArray(entries)).toBe(true)
     expect(entries.length).toBeGreaterThanOrEqual(1)
   })
 
   it('getArticleEntries returns a non-empty array', async () => {
     const { getArticleEntries } = await import('../../lib/content/articles')
-    const entries = getArticleEntries()
+    const entries = await getArticleEntries()
     expect(Array.isArray(entries)).toBe(true)
     expect(entries.length).toBeGreaterThanOrEqual(1)
   })
 
   it('getScienceEntries returns a non-empty array', async () => {
     const { getScienceEntries } = await import('../../lib/content/science')
-    const entries = getScienceEntries()
+    const entries = await getScienceEntries()
     expect(Array.isArray(entries)).toBe(true)
     expect(entries.length).toBeGreaterThanOrEqual(1)
   })
 
   it('getSkillEntries returns a non-empty array', async () => {
     const { getSkillEntries } = await import('../../lib/content/skills')
-    const entries = getSkillEntries()
+    const entries = await getSkillEntries()
     expect(Array.isArray(entries)).toBe(true)
     expect(entries.length).toBeGreaterThanOrEqual(1)
   })

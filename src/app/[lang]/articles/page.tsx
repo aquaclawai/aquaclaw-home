@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: ArticlesPageProps) {
 export default async function ArticlesPage({ params }: ArticlesPageProps) {
   const { lang } = await params
   const dict = await getDictionary(lang as Locale)
-  const entries = getArticleEntries()
+  const entries = await getArticleEntries()
   const pageEntries = entries.slice(0, PAGE_SIZE)
   const totalPages = Math.ceil(entries.length / PAGE_SIZE)
 

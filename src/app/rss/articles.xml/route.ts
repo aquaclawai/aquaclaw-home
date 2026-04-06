@@ -4,7 +4,7 @@ import { getArticleEntries } from '../../../../lib/content/articles'
 const BASE_URL = 'https://aquaclaw.ai'
 
 export async function GET() {
-  const entries = getArticleEntries()
+  const entries = await getArticleEntries()
 
   const items = entries
     .map(

@@ -30,7 +30,7 @@ export default async function AquariumPage({ params }: AquariumPageProps) {
   const { lang } = await params
   const dict = await getDictionary(lang as Locale)
 
-  const allEntries = getArticleEntries()
+  const allEntries = await getArticleEntries()
   const tutorialArticles = allEntries.filter((e) =>
     TUTORIAL_SLUGS.includes(e.slug)
   )

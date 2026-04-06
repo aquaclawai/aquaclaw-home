@@ -30,10 +30,10 @@ export default async function HomePage({ params }: HomePageProps) {
   const dict = await getDictionary(lang as Locale)
 
   // Fetch all content once (server-side, at build time)
-  const allDiary = getDiaryEntries()
-  const allArticles = getArticleEntries()
-  const allScience = getScienceEntries()
-  const allSkills = getSkillEntries()
+  const allDiary = await getDiaryEntries()
+  const allArticles = await getArticleEntries()
+  const allScience = await getScienceEntries()
+  const allSkills = await getSkillEntries()
 
   // Derive counts and slices
   const diaryCount = allDiary.length

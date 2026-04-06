@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import { MascotImage } from '@/components/ui/MascotImage'
 import MobileMenuTrigger from './MobileMenuTrigger'
+import FeedbackDropdown from './FeedbackDropdown'
 
 interface HeaderProps {
   lang: string
   dict: {
-    nav: { diary: string; articles: string; science: string; skills: string; aquarium: string; aquariumCta: string; home: string }
+    nav: { diary: string; articles: string; science: string; skills: string; aquarium: string; aquariumCta: string; home: string; feedback: string }
     header: { logoAlt: string; menuOpen: string; menuClose: string }
     site: { name: string }
   }
@@ -43,6 +44,9 @@ export default function Header({ lang, dict }: HeaderProps) {
                 </Link>
               </li>
             ))}
+            <li>
+              <FeedbackDropdown label={dict.nav.feedback} />
+            </li>
             <li>
               <Link
                 href={`/${lang}/aquarium`}

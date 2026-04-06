@@ -36,14 +36,14 @@ describe('content storage structure (FOUN-03)', () => {
 describe('content access layer (FOUN-04)', () => {
   it('getDiaryEntries returns a non-empty array', async () => {
     const { getDiaryEntries } = await import('../../lib/content/diary')
-    const entries = getDiaryEntries()
+    const entries = await getDiaryEntries()
     expect(Array.isArray(entries)).toBe(true)
     expect(entries.length).toBeGreaterThanOrEqual(1)
   })
 
   it('getDiaryEntries returns day-001 entry with correct title', async () => {
     const { getDiaryEntries } = await import('../../lib/content/diary')
-    const entries = getDiaryEntries()
+    const entries = await getDiaryEntries()
     const day001 = entries.find((e) => e.slug === 'day-001')
     expect(day001).toBeDefined()
     expect(day001?.title).toBe('First Day Building AquaClaw')
@@ -51,46 +51,46 @@ describe('content access layer (FOUN-04)', () => {
 
   it('getDiaryEntries day-001 has dayNumber 1', async () => {
     const { getDiaryEntries } = await import('../../lib/content/diary')
-    const entries = getDiaryEntries()
+    const entries = await getDiaryEntries()
     const day001 = entries.find((e) => e.slug === 'day-001')
     expect(day001?.dayNumber).toBe(1)
   })
 
   it('getDiaryEntries day-001 has tags containing foundation', async () => {
     const { getDiaryEntries } = await import('../../lib/content/diary')
-    const entries = getDiaryEntries()
+    const entries = await getDiaryEntries()
     const day001 = entries.find((e) => e.slug === 'day-001')
     expect(day001?.tags).toContain('foundation')
   })
 
   it('getDiaryEntry("day-001") returns the correct entry', async () => {
     const { getDiaryEntry } = await import('../../lib/content/diary')
-    const entry = getDiaryEntry('day-001')
+    const entry = await getDiaryEntry('day-001')
     expect(entry).not.toBeNull()
     expect(entry?.slug).toBe('day-001')
   })
 
   it('getDiaryEntry("nonexistent") returns null', async () => {
     const { getDiaryEntry } = await import('../../lib/content/diary')
-    expect(getDiaryEntry('nonexistent')).toBeNull()
+    expect(await getDiaryEntry('nonexistent')).toBeNull()
   })
 
   it('getArticleEntries returns 5 seed articles', async () => {
     const { getArticleEntries } = await import('../../lib/content/articles')
-    const entries = getArticleEntries()
+    const entries = await getArticleEntries()
     expect(Array.isArray(entries)).toBe(true)
     expect(entries.length).toBe(5)
   })
 
   it('getScienceEntries returns 5 seed entries', async () => {
     const { getScienceEntries } = await import('../../lib/content/science')
-    const entries = getScienceEntries()
+    const entries = await getScienceEntries()
     expect(entries.length).toBe(5)
   })
 
   it('getSkillEntries returns 5 seed entries', async () => {
     const { getSkillEntries } = await import('../../lib/content/skills')
-    const entries = getSkillEntries()
+    const entries = await getSkillEntries()
     expect(entries.length).toBe(5)
   })
 

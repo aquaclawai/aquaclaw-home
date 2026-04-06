@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: SkillsPageProps) {
 export default async function SkillsPage({ params }: SkillsPageProps) {
   const { lang } = await params
   const dict = await getDictionary(lang as Locale)
-  const entries = getSkillEntries()
+  const entries = await getSkillEntries()
 
   // Derive unique categories server-side — sorted alphabetically
   const categories = Array.from(new Set(entries.map((e) => e.category))).sort()

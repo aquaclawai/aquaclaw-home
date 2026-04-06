@@ -1,22 +1,14 @@
 // next.config.mjs
-import createMDX from '@next/mdx'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
     remotePatterns: [],
   },
+  // Bundle content/ files for filesystem fallback when Blob token is not yet configured.
   outputFileTracingIncludes: {
     '/**': ['./content/**/*'],
   },
 }
 
-const withMDX = createMDX({
-  options: {
-    remarkPlugins: ['remark-gfm'],
-    rehypePlugins: ['rehype-pretty-code'],
-  },
-})
-
-export default withMDX(nextConfig)
+export default nextConfig
